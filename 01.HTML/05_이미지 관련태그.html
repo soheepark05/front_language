@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 관련 태그</title>
+</head>
+<body>
+    <h1>이미지 관련 태그</h1>
+
+    <h3>src 속성</h3>
+
+    <!--
+        src 속성에 경로를 설정하여 이미지 파일을 불러온다.
+
+    -->
+
+    <!--상대경로...를 통해서 가져올거다.. ./는 현재경로 ../는 상위경로-->
+    <img src="../resources/image/river1.PNG"> 
+    
+    <h3>alt 속성</h3>
+    <!--사진의 경로가 잘 못 되었거나 이미지를 제대로 표현할 수 없을 경우 대체 텍스트의 용도로 사용된다..
+        파일 경로 또는 파일명을 틀리게 작성(확장자는 대소문자 구분 안함)-->
+
+    <img src="../resources/image/river.PNG" alt="이사진은 강사진입니다.. 이미지를 불러올 수 없습니다.">
+
+    <h3>width와 height</h3>
+    <!--
+        사진의 높이와 너비를 지정할 수 있다.
+        고정된 단위(px 등)의 크기로도 지정 가능하다.
+    -->
+    <h4>고정 크기 단위: 화면 사이즈가 변해도 크기가 변하지는 않는다.</h4>
+    <img src ="../resources/image/flower1.PNG" width="200px" height="150px">
+    <img src ="../resources/image/flower2.PNG" width="200px" height="150px">
+    <img src ="../resources/image/flower3.PNG" width="200px" height="150px">
+    <img src ="../resources/image/flower4.PNG" width="200px" height="150px">
+    <img src ="../resources/image/flower5.PNG" width="200px" height="150px">
+
+    <h4>가변 크기 단위 : 화면 사이즈 혹은 기준 사이즈에 따라 크기..</h4>
+    
+
+
+
+    <hr>
+    <h3>이미지 맵</h3>
+    <!--
+        이미지를 구역별로 나누어 링크를 걸어주는 태그이다.
+    -->
+
+    <img src="../resources/image/river2.PNG" width="600px" height="400px" usemap="#map">
+
+    <map name = "map">
+        <!--왼쪽 누르면 네이버로 가게..-->
+        <!--  -----+ 이쪽으로 가면 x축 | 쪽으로 가면 y축-->
+        <!-- 타겟 속성 _self 와 _blank의 차이? : self는 그창에서 새로운창 띄우는거고 blank는 아예 새로운창 생성해서 띄움 -->
+        <area shape = "rect" coords="0,0,300,400" href="https://www.naver.com" target="_self">
+        <!--오른쪽 누르면 구글로 가게..-->
+        <area shape = "rect" coords="300,0,600,400" href="https://www.google.com" target="_blank">
+
+        <!-- 원으로 하고싶으면...?-->
+        <!-- <area shape="circle" coords="300,200,100",href="https://www.naver.com" target="_self">-->
+
+    </map>
+
+    <hr>
+    <br> 
+    <br> 
+
+
+
+</body>
+</html>

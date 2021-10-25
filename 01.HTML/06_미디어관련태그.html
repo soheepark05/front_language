@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 관련 태그</title>
+</head>
+<body>
+    <h1>미디어 관련 태그</h1>
+    <!--
+        html5부터는 플러그인 기능을 사용하지 않고 미디어(비디오, 오디오)를 직접
+        html문서에서 실행시킬 수 있는 태그를 제공한다.
+    -->
+    <h3>오디오 관련 태그</h3>
+    <!--
+        오디오 태그 속성
+        - src: 오디오 파일의 경로를 지정
+        - controls : 재생 도구 출력 지정
+        - autoplay : 자동 재생 여부(크롬x 모바일x--얜 지금 확실하진않음)
+        - loop : 재생 반복 여부
+        - preload : 미리 오디오 파일을 다운로드할지 여부
+    -->
+    <audio src="../resources/audio/major.mp3" controls loop=""></audio>
+
+    <h3>비디오 관련 태그</h3>
+    <!--
+        - 비디오 태그 속성
+            - src: 오디오 파일의 경로를 지정
+            - controls : 재생 도구 출력 지정
+            - autoplay : 자동 재생 여부(크롬x 모바일x--얜 지금 확실하진않음)
+            - loop : 재생 반복 여부
+            - preload : 미리 비디오 파일을 다운로드할지 여부
+            - poster: 재생 전에 출력할 이미지 파일의 경로를 지정
+            - width / height : 비디오 태그의 너비와 높이 지정
+
+    -->
+    <video src="../resources/video/video1.mp4" controls loop poster="../resources/image/city1.PNG" width="300" height="200"></video>
+</body>
+</html>
