@@ -1,0 +1,70 @@
+<!-- 정리 아직 낫 옛-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그</title>
+</head>
+<body>
+    <h1>폼 관련 태그</h1>
+    <!--  
+        <form> 태그
+            form 태그는 html에서 사용자가 입력할 수 있는 양식을 제공하는 태그이다.
+            form 태그 내의 <input> 태그들을 통해서 사용자가 입력한 정보를 서버로 넘기면서 요청하는 역할을 한다.
+            * action : 폼 내에 입력된 값들을 전달할 서버(페이지)에 대한 내용을 기입한다.
+            * method : get / post 방식으로 전송 방식을 지정한다.
+                get : 서버에 사용자가 입력한 값을 전달하면서 요청 시 사용자가 입력한 값들을 URL에 노출되는 방식
+                post : 서버에 사용자가 입력한 값을 전달하면서 요청 시 사용자가  입력한 값을 URL에 노출시키지 않는 방식
+            * autocomplete : 이전 입력 내용 출력하는 기능, 생략하면 자동으로 출력된다. (default : on, 각 태그별로 지정 가능)
+    -->
+
+    <h3>폼 태그의 기본 구조</h3>
+    <form action="" method="post" autocomplete="off">
+        <label>
+            <!-- 
+                name : form 태그 안에서 input 태그를 구분하는 역할을 한다.
+                       나중에 서버로 값을 전달할 때 name 속성과 텍스트 필드에 작성된 값이 세트(key=value)로 넘어간다.
+            -->
+            검색할 내용 : <input type="text" size="10" name="search">
+        </label>
+
+        <!--  
+            submit 버튼을 눌렀을 때 method 요청 전송 방식으로 action에 지정한 서버로 사용자가 입력한 값(key=value)을 전달한다.
+        -->
+        <input type="submit" value="검색">
+    </form>
+
+    <hr>
+    <h4>fieldset : 폼 요소를 그룹으로 묶는 태그이다.</h4>
+    <h4>legend : 묶은 폼 요소에 명칭을 붙이는 태그이다.</h4>
+
+    <form>
+        <fieldset>
+            <legend>회원정보</legend>
+
+            <label>아이디 : <input type="text" name="id" autocomplete="off"></label> <br>
+            <label>패스워드 : <input type="password" name="pwd"></label> <br>
+        </fieldset>
+        
+        <p></p>
+
+        <fieldset>
+            <legend>배송정보</legend>
+            
+            <label>수령인 : <input type="text" name="name"></label><br>
+            <label>주소 : <input type="text" name="address"></label>
+        </fieldset>
+
+        <p></p>
+
+        <input type="submit" value="회원가입">
+    </form>
+
+    <hr>
+
+    <h3>텍스트와 관련된 input 태그들</h3>
+</body>
+</html>
