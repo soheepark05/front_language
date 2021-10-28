@@ -1,0 +1,22 @@
+@import url('https://fonts.google.com/css2?family=East+Sea+Dokdo&display=swap');
+
+
+#ff1{
+
+    font-family: 궁서체; /*"" 써도되고 ''써도되고 걍써도된다..*/
+}
+
+#ff2{
+
+    font-family: '굴림체'; /*"" 써도되고 ''써도되고 걍써도된다..*/
+}
+
+#ff3{
+
+    font-family: '없는글꼴', '궁서체' ,'굴림체'; /*"" 써도되고 ''써도되고 걍써도된다..*/
+}
+#web-font{
+
+    font-size: 5em;
+    font-family: 'East Sea Dokdo',cursive;
+}

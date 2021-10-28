@@ -1,3 +1,10 @@
 *{
     color: green;
 }
+
+/*기본 속성 선택자 테스트*/
+/* div중 name 속성 값이 name2과 일치하는 태그*/
+
+div[name="name1"]{
+    background-color: orangered;
+}
