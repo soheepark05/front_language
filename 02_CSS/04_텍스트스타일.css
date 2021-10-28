@@ -1,22 +1,202 @@
-@import url('https://fonts.google.com/css2?family=East+Sea+Dokdo&display=swap');
+/* font-family 테스트 */
+/* body {
+    font-family: '돋움';
+} */
+/* @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap'); */
 
-
-#ff1{
-
-    font-family: 궁서체; /*"" 써도되고 ''써도되고 걍써도된다..*/
+#ff1 {
+    font-family: '궁서체';
 }
 
-#ff2{
-
-    font-family: '굴림체'; /*"" 써도되고 ''써도되고 걍써도된다..*/
+#ff2 {
+    font-family: '굴림체';
 }
 
-#ff3{
-
-    font-family: '없는글꼴', '궁서체' ,'굴림체'; /*"" 써도되고 ''써도되고 걍써도된다..*/
+#ff3 {
+    font-family: '없는글꼴', '궁서체', '굴림체';
 }
-#web-font{
 
+#web-font {
     font-size: 5em;
-    font-family: 'East Sea Dokdo',cursive;
+    font-family: 'East Sea Dokdo', cursive;
+}
+
+/* font-size 테스트 */
+#size1 {
+    font-size: 30px;
+}
+
+#size2 {
+    font-size: 2em;
+}
+
+#size3 {
+    font-size: 150%;
+}
+
+/* font-weight 테스트 */
+#fw1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#fw2 {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+#fw3 {
+    font-size: 2em;
+    /* font-weight: bolder; */
+    font-weight: 900;
+}
+
+/* font-variant 테스트 */
+#fv {
+    font-variant: small-caps;
+}
+
+/* font-style 테스트 */
+#fs1 {
+    font-style: italic;
+}
+
+#fs2 {
+    font-style: oblique;
+}
+
+/* color 테스트 */
+#c_name {
+    color: seagreen;
+}
+
+#c_16 {
+    color: #6e6ce2;
+}
+
+#c_rgb {
+    color: rgb(235, 192, 51);
+}
+
+#c_rgba {
+    color: rgba(235, 192, 51, .3);
+}
+
+/* text-decoration */
+#td1 {
+    text-decoration: underline;
+}
+
+#td2 {
+    text-decoration: line-through;
+}
+
+#td3 {
+    text-decoration: overline;
+}
+
+#td4 {
+    text-decoration: none;
+}
+
+/* text-transform */
+#tt1 {
+    text-transform: none;
+}
+
+#tt2 {
+    text-transform: capitalize;
+}
+
+#tt3 {
+    text-transform: uppercase;
+}
+
+#tt4 {
+    text-transform: lowercase;
+}
+
+/* text-shadow */
+#bg {
+    background-color: black;
+    padding: 50px;
+    margin: 30px;
+}
+
+.shadow {
+    font-size: 100px;
+    line-height: 30px;
+    font-weight: 900;
+}
+
+#ts1 {
+    color: orange;
+    text-shadow: 0px 0px 20px white;
+}
+
+#ts2 {
+    color: white;
+    text-shadow: 0px 0px 50px #fff;
+}
+
+#ts3 {
+    color: white;
+    text-shadow: 1px 1px 20px yellowgreen;
+}
+
+#ts4 {
+    text-shadow: 0px 0px 4px #ccc,
+                 0px -5px 4px #ff3,
+                 2px -10px 6px #fd3,
+                 -2px -15px 11px #f80,
+                 2px -19px 18px #f20;
+}
+
+/* letter spacing */
+
+#spacing1 {
+    letter-spacing: 10px;
+}
+
+#spacing2 {
+    word-spacing: 10px;
+}
+
+/* text-align */
+#ta1 {
+    text-align: left;
+}
+
+#ta2 {
+    text-align: right;
+}
+
+#ta3 {
+    text-align: center
+}
+
+#ta4 {
+    text-align: justify;
+}
+
+/* text-indent */
+#ti {
+        text-indent: 15px;
+}
+
+/* line-height */
+#lh {
+    line-height: 30px;
+}
+
+/* text-overflow */
+.over-class {
+    background-color: lavender;
+    width: 500px;
+}
+
+#to {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

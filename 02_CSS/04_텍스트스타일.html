@@ -5,38 +5,379 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>텍스트 스타일</title>
-    <link rel ="stylesheet" href ="./04_텍스트스타일.css">
-    <link rel ="preconnect" href ="https://fonts.googleapis.com">
-    <link rel ="preconnect" href ="https://fonts.gstatic.com" crossorigin> 
-    <link href ="https://fonts.google.com/css2?family=East+Sea+Dokdo&display=swap" rel ="stylesheet">
-
-
-
+    <link rel="stylesheet" href="./04_텍스트스타일.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>텍스트 스타일</h1>
-
-    <h3>font-family</h3>
-
+    
+    <h2>font-family</h2>
     <p>
         텍스트의 글꼴을 지정할 때 사용한다.
     </p>
-    
-    <p id="ff1"> 글꼴 변경 테스트1</p>
-    <p id="ff2"> 글꼴 변경 테스트2</p>
-    <p id="ff3"> 글꼴 변경 테스트3</p>
 
+    <p id="ff1">글꼴 변경 테스트 1</p>
+    <p id="ff2">글꼴 변경 테스트 2</p>
+    <p id="ff3">글꼴 변경 테스트 3</p>
 
     <h3>웹 폰트 사용하는 방법</h3>
-    
+
     <p>
         웹 폰트 제공 사이트
-        <a href="https://fonts.google.com"> 구글 웹 폰트 </a>
+        <a href="https://fonts.google.com/">구글 웹 폰트</a>
     </p>
 
     <p id="web-font">웹 폰트 테스트</p>
 
     <hr>
+
+    <h2>font-size</h2>
+    <p>
+        텍스트의 크기를 변경할 때 사용한다.
+    </p>
+
+    <ul>
+        <li id="size1">px 테스트</li>
+        <li id="size2">em 테스트</li>
+        <li id="size3">% 테스트</li>
+    </ul>
+
+    <hr>
+
+    <h2>font-weight</h2>
+    <p>
+        글자의 두께를 변경할 때 사용한다.
+    </p>
+
+    <ul>
+        <li style="font-size: 2em;">원래 굵기</li>
+        <li id="fw1">굵은 글꼴</li>
+        <li id="fw2">원래 굵기보다 가늘게</li>
+        <li id="fw3">굵은 글꼴보다 더 굵게</li>
+    </ul>
+
+    <hr>
+
+    <h2>font-variant</h2>
+    <p>
+        작은 대문자로 변경할 때 사용한다.
+    </p>
+
+    <p>I LOVE YOU</p>
+    <p id="fv">i love you</p>
+
+    <hr>
+
+    <h2>font-style</h2>
+    <p>
+        텍스트의 기울임을 지정할 때 사용한다.
+    </p>
+
+    <ul>
+        <li id="fs1">italic 테스트</li>
+        <li id="fs2">oblique 테스트</li>
+    </ul>
+
+    <hr>
+
+    <h2>color</h2>
+    <p>
+        텍스트의 색상을 지정할 때 사용한다.
+    </p>
+
+    <ul>
+        <li id="c_name">색상명으로 지정</li>
+        <li id="c_16">16진수 값으로 지정</li>
+        <li id="c_rgb">rgb로 지정</li>
+        <li id="c_rgba">rgba로 지정</li>
+    </ul>
+
+    <hr>
+
+    <h2>text-decoration</h2>
+    <p>
+        텍스트에 줄을 긋거나 줄을 없앨 때 사용한다.
+    </p>
+
+    <ul>
+        <li id="td1">텍스트 아래에 줄 긋기</li>
+        <li id="td2">텍스트 중간에 줄 긋기</li>
+        <li id="td3">텍스트 위에 줄 긋기</li>
+        <li><a href="#" id="td4">하이퍼링크 밑줄 없애기</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>text-transform</h2>
+    <p>
+        영문 텍스트의 대소문자 변환시 사용한다.
+    </p>
+
+    <ul>
+        <li id="tt1">none</li>
+        <li id="tt2">capitalize hello</li>
+        <li id="tt3">uppercase</li>
+        <li id="tt4">LOWERCASE</li>
+    </ul>
+
+    <hr>
+
+    <h2>text-shadow</h2>
+    <p>
+        텍스트에 그림자 효과를 줄 때 사용한다.
+    </p>
+
+    <div id="bg">
+        <span id="ts1" class="shadow">HTML5</span>
+        <span id="ts2" class="shadow">HTML5</span>
+        <span id="ts3" class="shadow">HTML5</span>
+        <span id="ts4" class="shadow">HTML5</span>
+    </div>
+
+    <hr>
+
+    <h2>letter-spacing과 word-spacing</h2>
+
+    <h3>letter-spacing</h3>
+    <p>
+        낱개 글자의 간격을 조정하고 싶을 때 사용한다.
+    </p>
+
+    <p id="spacing1">
+        (대전=연합뉴스) 박주영 기자 = 한국기초과학지원연구원은 정혜종 박사와 전북대 의대 홍성출 교수 공동 연구팀이 중증 코로나19 증상을 나타내는 햄스터 감염모델을 최초로 개발했다고 28일 밝혔다.
+
+        경증 코로나19는 감기와 비슷한 증상을 보이다가 자연 치유되는 경우가 많지만, 중증 코로나19는 높은 치사율을 보이는 것은 물론 완치 후에도 브레인포그(brain fog·뇌 흐림, 머릿속에 안개가 낀 것처럼 멍한 느낌이 지속되는 증상), 후각 상실 등 심각한 후유증을 낳는다.
+
+        중증 코로나19 치료를 위해서는 사람의 중증 코로나19 증상을 나타내는 동물 감염모델이 필요하다.
+
+        기존 코로나19 감염 동물모델은 호흡기 증상과 폐렴 등 증상만 나타내 경증 코로나19나 단순 호흡기 염증 감염모델에 가까웠다.
+
+        사람과 가장 흡사한 영장류 모델도 우편향 폐렴(오른쪽 폐에 염증이 더 심해진 형태를 보이는 폐렴), 발열, 뇌나 간 등으로 바이러스가 전이되는 이차감염 증상이 없어 연구에 한계가 있었다.
+
+        연구팀은 자체 보유한 고령동물생육시설 내 실험용 쥐와 햄스터 등을 대상으로 코로나19 바이러스에 대한 감수성 스크리닝을 시행해 사람과 가장 유사한 중증 반응을 나타내는 유전적인 형태를 보이는 햄스터를 발굴, 'SH101 햄스터'라고 명명했다.
+
+        개발한 햄스터 모델은 우편향 폐렴, 발열, 이차감염 등 사람의 중증 코로나19 감염 증상을 그대로 나타냈다.
+
+        코로나19 치료제와 백신 등 개발을 위한 임상시험 기간을 획기적으로 줄이고 중증 코로나19 원인을 밝히는 데 기여할 것으로 기대된다.
+    </p>
+
+    <h3>word-spacing</h3>
+    <p>
+        단어와 단어 사이의 간격을 조정하고 싶을 때 사용한다.
+    </p>
+
+    <p id="spacing2">
+        (대전=연합뉴스) 박주영 기자 = 한국기초과학지원연구원은 정혜종 박사와 전북대 의대 홍성출 교수 공동 연구팀이 중증 코로나19 증상을 나타내는 햄스터 감염모델을 최초로 개발했다고 28일 밝혔다.
+
+        경증 코로나19는 감기와 비슷한 증상을 보이다가 자연 치유되는 경우가 많지만, 중증 코로나19는 높은 치사율을 보이는 것은 물론 완치 후에도 브레인포그(brain fog·뇌 흐림, 머릿속에 안개가 낀 것처럼 멍한 느낌이 지속되는 증상), 후각 상실 등 심각한 후유증을 낳는다.
+
+        중증 코로나19 치료를 위해서는 사람의 중증 코로나19 증상을 나타내는 동물 감염모델이 필요하다.
+
+        기존 코로나19 감염 동물모델은 호흡기 증상과 폐렴 등 증상만 나타내 경증 코로나19나 단순 호흡기 염증 감염모델에 가까웠다.
+
+        사람과 가장 흡사한 영장류 모델도 우편향 폐렴(오른쪽 폐에 염증이 더 심해진 형태를 보이는 폐렴), 발열, 뇌나 간 등으로 바이러스가 전이되는 이차감염 증상이 없어 연구에 한계가 있었다.
+
+        연구팀은 자체 보유한 고령동물생육시설 내 실험용 쥐와 햄스터 등을 대상으로 코로나19 바이러스에 대한 감수성 스크리닝을 시행해 사람과 가장 유사한 중증 반응을 나타내는 유전적인 형태를 보이는 햄스터를 발굴, 'SH101 햄스터'라고 명명했다.
+
+        개발한 햄스터 모델은 우편향 폐렴, 발열, 이차감염 등 사람의 중증 코로나19 감염 증상을 그대로 나타냈다.
+
+        코로나19 치료제와 백신 등 개발을 위한 임상시험 기간을 획기적으로 줄이고 중증 코로나19 원인을 밝히는 데 기여할 것으로 기대된다.
+    </p>
+
+    <hr>
+
+    <h1>문단 스타일</h1>
+
+    <h2>text-align</h2>
+
+    <p>문장을 정렬하고 싶을 때 사용한다.</p>
+
+    <h3>왼쪽 정렬</h3>
+    <p id="ta1">
+        (대전=연합뉴스) 박주영 기자 = 한국기초과학지원연구원은 정혜종 박사와 전북대 의대 홍성출 교수 공동 연구팀이 중증 코로나19 증상을 나타내는 햄스터 감염모델을 최초로 개발했다고 28일 밝혔다.
+
+        경증 코로나19는 감기와 비슷한 증상을 보이다가 자연 치유되는 경우가 많지만, 중증 코로나19는 높은 치사율을 보이는 것은 물론 완치 후에도 브레인포그(brain fog·뇌 흐림, 머릿속에 안개가 낀 것처럼 멍한 느낌이 지속되는 증상), 후각 상실 등 심각한 후유증을 낳는다.
+
+        중증 코로나19 치료를 위해서는 사람의 중증 코로나19 증상을 나타내는 동물 감염모델이 필요하다. 밝히는 데 기여할 것으로 기대된다.
+    </p>
+
+
+    <h3>오른쪽 정렬</h3>
+    <p id="ta2">
+        (대전=연합뉴스) 박주영 기자 = 한국기초과학지원연구원은 정혜종 박사와 전북대 의대 홍성출 교수 공동 연구팀이 중증 코로나19 증상을 나타내는 햄스터 감염모델을 최초로 개발했다고 28일 밝혔다.
+
+        경증 코로나19는 감기와 비슷한 증상을 보이다가 자연 치유되는 경우가 많지만, 중증 코로나19는 높은 치사율을 보이는 것은 물론 완치 후에도 브레인포그(brain fog·뇌 흐림, 머릿속에 안개가 낀 것처럼 멍한 느낌이 지속되는 증상), 후각 상실 등 심각한 후유증을 낳는다.
+
+        중증 코로나19 치료를 위해서는 사람의 중증 코로나19 증상을 나타내는 동물 감염모델이 필요하다. 밝히는 데 기여할 것으로 기대된다.
+    </p>
+
+    <h3>가운데 정렬</h3>
+    <p id="ta3">
+        (대전=연합뉴스) 박주영 기자 = 한국기초과학지원연구원은 정혜종 박사와 전북대 의대 홍성출 교수 공동 연구팀이 중증 코로나19 증상을 나타내는 햄스터 감염모델을 최초로 개발했다고 28일 밝혔다.
+
+        경증 코로나19는 감기와 비슷한 증상을 보이다가 자연 치유되는 경우가 많지만, 중증 코로나19는 높은 치사율을 보이는 것은 물론 완치 후에도 브레인포그(brain fog·뇌 흐림, 머릿속에 안개가 낀 것처럼 멍한 느낌이 지속되는 증상), 후각 상실 등 심각한 후유증을 낳는다.
+
+        중증 코로나19 치료를 위해서는 사람의 중증 코로나19 증상을 나타내는 동물 감염모델이 필요하다. 밝히는 데 기여할 것으로 기대된다.
+    </p>
+
+    <h3>양쪽 정렬</h3>
+    <p id="ta4">
+        (대전=연합뉴스) 박주영 기자 = 한국기초과학지원연구원은 정혜종 박사와 전북대 의대 홍성출 교수 공동 연구팀이 중증 코로나19 증상을 나타내는 햄스터 감염모델을 최초로 개발했다고 28일 밝혔다.
+
+        경증 코로나19는 감기와 비슷한 증상을 보이다가 자연 치유되는 경우가 많지만, 중증 코로나19는 높은 치사율을 보이는 것은 물론 완치 후에도 브레인포그(brain fog·뇌 흐림, 머릿속에 안개가 낀 것처럼 멍한 느낌이 지속되는 증상), 후각 상실 등 심각한 후유증을 낳는다.
+
+        중증 코로나19 치료를 위해서는 사람의 중증 코로나19 증상을 나타내는 동물 감염모델이 필요하다. 밝히는 데 기여할 것으로 기대된다.
+    </p>
+
+    <hr>
+
+    <h2>text-indent</h2>
+    <p>
+        문장을 들여쓰기 하고 싶을 때 사용한다.
+    </p>
+    <p id="ti">
+        한국기초과학지원연구원은 정혜종 박사와 전북대 의대 홍성출 교수 공동 연구팀이 중증 코로나19 증상을 나타내는 햄스터 감염모델을 최초로 개발했다고 28일 밝혔다.
+
+        경증 코로나19는 감기와 비슷한 증상을 보이다가 자연 치유되는 경우가 많지만, 중증 코로나19는 높은 치사율을 보이는 것은 물론 완치 후에도 브레인포그(brain fog·뇌 흐림, 머릿속에 안개가 낀 것처럼 멍한 느낌이 지속되는 증상), 후각 상실 등 심각한 후유증을 낳는다.
+
+        중증 코로나19 치료를 위해서는 사람의 중증 코로나19 증상을 나타내는 동물 감염모델이 필요하다. 밝히는 데 기여할 것으로 기대된다.
+    </p>
+
+    <hr>
+
+    <h2>line-height</h2>
+    <p>
+        문장끼리의 줄 간격 조정하고 싶을 때 사용한다.
+    </p>
+    <p id="lh">
+        한국기초과학지원연구원은 정혜종 박사와 전북대 의대 홍성출 교수 공동 연구팀이 중증 코로나19 증상을 나타내는 햄스터 감염모델을 최초로 개발했다고 28일 밝혔다.
+
+        경증 코로나19는 감기와 비슷한 증상을 보이다가 자연 치유되는 경우가 많지만, 중증 코로나19는 높은 치사율을 보이는 것은 물론 완치 후에도 브레인포그(brain fog·뇌 흐림, 머릿속에 안개가 낀 것처럼 멍한 느낌이 지속되는 증상), 후각 상실 등 심각한 후유증을 낳는다.
+
+        중증 코로나19 치료를 위해서는 사람의 중증 코로나19 증상을 나타내는 동물 감염모델이 필요하다. 밝히는 데 기여할 것으로 기대된다.
+    </p>
+
+    <hr>
+
+    <h2>text-overflow</h2>
+    <p>
+        영역을 벗어나는 텍스트에 대해 지정하고 싶을 때 사용한다.
+    </p>
+
+    <div class="over-class">
+        <p id="to">
+            한국기초과학지원연구원은 정혜종 박사와 전북대 의대 홍성출 교수 공동 연구팀이 중증 코로나19 증상을 나타내는 햄스터 감염모델을 최초로 개발했다고 28일 밝혔다.
     
+            경증 코로나19는 감기와 비슷한 증상을 보이다가 자연 치유되는 경우가 많지만, 중증 코로나19는 높은 치사율을 보이는 것은 물론 완치 후에도 브레인포그(brain fog·뇌 흐림, 머릿속에 안개가 낀 것처럼 멍한 느낌이 지속되는 증상), 후각 상실 등 심각한 후유증을 낳는다.
+    
+            중증 코로나19 치료를 위해서는 사람의 중증 코로나19 증상을 나타내는 동물 감염모델이 필요하다. 밝히는 데 기여할 것으로 기대된다.
+        </p>
+    </div>
+
+    <hr>
+
+    <h1>목록 스타일</h1>
+
+    <h2>list-style-type</h2>
+    <h3>순서없는 목록 스타일</h3>
+    <h4>채운 원 모양 불렛(기본)</h4>
+    <ul style="list-style-type: disc;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ul>
+
+    <h4>빈 원 모양 불렛</h4>
+    <ul style="list-style-type: circle;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ul>
+
+    <h4>채운 사각형 모양 불렛</h4>
+    <ul style="list-style-type: square;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ul>
+
+    <h4>불렛 없애기</h4>
+    <ul style="list-style-type: none;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ul>
+
+    <h3>순서 있는 목록 스타일</h3>
+    <h4>1로 시작하는 10진수(기본)</h4>
+    <ol style="list-style-type: decimal;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ol>
+
+    <h4>앞에 0이 붙는 10진수</h4>
+    <ol style="list-style-type: decimal-leading-zero;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ol>
+
+    <h4>소문자 로마 숫자</h4>
+    <ol style="list-style-type: lower-roman;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ol>
+
+    <h4>대문자 로마 숫자</h4>
+    <ol style="list-style-type: upper-roman;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ol>
+
+    <h4>알파벳 소문자</h4>
+    <ol style="list-style-type: lower-alpha;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ol>
+
+    <h4>알파벳 대문자</h4>
+    <ol style="list-style-type: upper-alpha;">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ol>
+
+    <h2>list-style-image</h2>
+    <ul style="list-style-image: url(../resources/image/iconsample.PNG);">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jqeury</li>
+    </ul>
+
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
 </body>
 </html>
