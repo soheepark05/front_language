@@ -1,10 +1,216 @@
-*{
+/* * {
     color: green;
+} */
+/* 기본 속성 선택자 테스트 */
+/* div 중 name 속성값이 name1과 일치하는 태그 */
+div[name="name1"] {
+    background-color: orangered;
 }
 
-/*기본 속성 선택자 테스트*/
-/* div중 name 속성 값이 name2과 일치하는 태그*/
+/* div 중 name 속성 안에 name1이 포함되어 있는 태그(속성값이 띄어쓰기로 구분된) */
+div[name~="name1"] {
+    background-color: yellow;
+}
 
-div[name="name1"]{
-    background-color: orangered;
+/* div 중 class 속성에서 class로 시작되는 태그 (-로 구분) */
+div[class|="class"] {
+    background-color: aqua;
+}
+
+/* div 중 name 속성이 name로 시작되는 태그*/
+div[name^="name"]{
+    background-color: blue;
+}
+
+/* div 중 class 속성이 class로 끝나는 경우 */
+div[class$=class] {
+    color: white;
+}
+
+/* div 중 class 속성 중에 i를 포함하는 태그 */
+div[class*=i] {
+    background-color: yellowgreen;
+    color: red;
+}
+
+/* 클래스가 div-class인 것 중 name 속성값에 name3 포함되어 있는 경우(속성값이 띄어쓰기로 구분) */
+.div-class[name~=name3] {
+    background-color: hotpink;
+}
+/* ------------------------------------- */
+
+/* 자손 선택자와 후선 선택자 테스트 */
+#test1>h4 {
+    background-color: orange;
+}
+
+#test1>ul>li {
+    background-color: coral;
+}
+
+#test1 li {
+    color: red;
+}
+
+/* --------------------------------------*/
+/* 동위 선택자 테스트 */
+#div-test {
+    background-color: red;
+}
+
+#div-test+div {
+    background-color: seagreen;
+}
+
+/* #div-test~div{
+    background-color: seagreen;
+} */
+
+/* --------------------------------------*/
+/* 반응 선택자 테스트 */
+#active-test, #hover-test {
+    background-color: springgreen;
+    width: 300px;
+    height: 300px;
+}
+
+#active-test:active {
+    background-color: yellow;
+    color: blue;
+}
+
+#hover-test:hover {
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+}
+
+/* #hover-test:active {
+    background-color: hotpink;
+    color: blue;
+} */
+
+/* --------------------------------------*/
+/* 상태 선택자 테스트 */
+input[type=checkbox]:checked {
+    width: 20px;
+    height: 20px;
+}
+
+input[type=checkbox]:checked+label {
+    font-size: 20px;
+}
+
+#userId:focus, #userPwd:focus {
+    background-color: wheat;
+    border: 2px solid red;
+}
+
+option:disabled {
+    background-color: violet;
+    color: white;
+}
+
+option:enabled {
+    background-color: greenyellow;
+}
+
+button:disabled {
+    color: red;
+}
+
+button:enabled {
+    background-color: yellowgreen;
+}
+
+/* -------------------------------- */
+/* 일반 구조 선택자 */
+/* 형제 관계 태그 중 첫 번째 태그 선택 */
+#test1 p:first-child {
+    background-color: red;
+    color: white;
+}
+
+/* 형제 관계 태그 중 마지막 태그 선택 */
+/* 마지막 자식이 p태그가 아니여서 스타일이 적용되지 않는다. */
+#test1 p:last-child {
+    background-color: red;
+    color: white;
+}
+
+/* 형제 관계 태그 중 앞에서 수열번 째 태그 선택 */
+/* 수식을 사용하거나 수식 대신 odd(홀수), even(짝수)를 대입해 줄 수 있다. */
+#test1 p:nth-child(2n) {
+    background-color: yellowgreen;
+    color: white;
+}
+
+/* 형제 관계 태그 중 뒤에서 수열번째 태그 선택 */
+#test1 p:nth-last-child(4){
+    background-color: skyblue;
+}
+
+/* ---------------------------------- */
+/* 형태 구조 선택자 */
+/* 형제 관계 태그 중 첫 번째 태그 선택 */
+#test2 p:first-of-type {
+    background-color: red;
+    color: white;
+}
+
+/* 형제 관계 태그 중 마지막 태그 선택 */
+#test2 p:last-of-type{
+    background-color: orange;
+    color: white;
+}
+
+/* 형제 관계 태그 중 앞에서 수열번 째 태그 선택 */
+/* 수식을 사용하거나 수식 대신 odd(홀수), even(짝수)를 대입해 줄 수 있다. */
+#test2 p:nth-of-type(even) {
+    background-color: yellowgreen;
+    color: white;
+}
+
+/* 형제 관계 태그 중 뒤에서 수열번째 태그 선택 */
+#test2 p:nth-last-of-type(4) {
+    background-color: skyblue;
+    color: white;
+}
+
+/* --------------------------------- */
+/* 문자 선택자 테스트 */
+/* 첫 번째 글자를 선택해서 스타일 적용 */
+#test3 p::first-letter {
+    font-size: 2em;
+}
+
+/* 첫 번째 라인을 선택해서 스타일 적용 */
+#test3 p::first-line {
+    background-color: wheat;
+}
+
+/* 태그 앞에 위치하는 공간을 선택 */ 
+#test3 p::before {
+    content: "1. ";
+}
+
+/* 태그 뒤에 위치하는 공간을 선택 */
+#test3 p::after {
+    content: "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@";
+}
+
+/* 사용자가 드래그한 글자 스타일 변경 */
+#test3 p::selection {
+    background-color: salmon;
+    color: white;
+}
+
+/* ---------------------------------- */
+/* 부정 선택자 */
+/* #test4 p:not(.p1) {
+    background-color: coral;
+} */
+
+#test4 p:not(:nth-child(odd)) {
+    background-color: coral;
 }
