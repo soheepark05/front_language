@@ -18,19 +18,25 @@
      } */
 
      /* 태그 선택자 테스트 */
-    /* body {
+     body {
          color : green;
-     } */
+     } 
 
       /* 스타일도 상속이 되서 body가 전체 색이 바뀐다..*/
      p{
          color: red;
      }
      
-     /* 아이디 선택자 테스트 */
+     /* 아이디 선택자 테스트 
+        - 아이디 선택자 : 태그 속성 id를 설정하고 id 값을 선택자로 한다.
+        - # 을 붙인다.
+        - 중복 허용 안댐
+     */
      #id1{
-         background-color: yellow;
-         color : violet;
+         
+        
+         background-color: yellow; /* 배경색 */
+         color : violet; /* 글자색 */
 
      }
      #id3{
@@ -38,7 +44,11 @@
          color : hotpink;
          
      }
-     /* 클래스 선택자 테스트 */
+     /* 클래스 선택자 테스트 
+        - 클래스 선택자 : . 으로 시작한다.
+        - 중복허용
+
+     */
      .class1{
         background-color: grey;
         color : orangered;
@@ -127,11 +137,11 @@
     </pre>
 
     <ul>
-        <li class="class1">클래스 선택자 테스트 1</li>
-        <li class="class2 test">클래스 선택자 테스트 2</li>
-        <li class="class1 test">클래스 선택자 테스트 3</li>
-        <li class="class2">클래스 선택자 테스트 4</li>
-        <li class="class1">클래스 선택자 테스트 5</li>
+        <li class="class1">클래스 선택자 테스트 1</li>  <!--그레이배경에 오렌지-->
+        <li class="class2 test">클래스 선택자 테스트 2</li> <!-- 퍼플글씨에 글자크기-->
+        <li class="class1 test">클래스 선택자 테스트 3</li> <!-- 그레이배경에 오렌지에 글자크기 -->
+        <li class="class2">클래스 선택자 테스트 4</li> <!-- 퍼플 글씨 -->
+        <li body >클래스 선택자 테스트 5</li> <!-- 초록색 글자 -->
     </ul>
 
     <br><br><br><br>
