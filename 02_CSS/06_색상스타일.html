@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상 스타일</title>
+    <style>
+        body {
+            /* background-color: hotpink; */
+            /* background-color: #fc1b97; */
+            /* background-color: rgb(255, 80, 80); */
+            /* background-color: rgba(255, 80, 80, .3); */
+            /* background-color: hsl(60, 100%, 50%); */
+            background-color: hsla(60, 100%, 50%, .3);
+        }
+
+        #div-bg {
+            width: 50%;
+            background-color: #ffffff;
+        }
+
+        .div-clip {
+            background-color: white;
+            margin: 30px;
+            padding: 30px;
+            width: 40%;
+            border: 15px dashed rgba(0, 0, 0, 0.2);
+        }
+
+        #div-clip1 {
+            background-clip: border-box;
+        }
+
+        #div-clip2 {
+            background-clip: padding-box;
+        }
+
+        #div-clip3 {
+            background-clip: content-box;
+        }
+
+        #div-bg-img {
+            border: 15px solid rgba(0, 0, 0, 0.2);
+            width: 70%;
+            height: 800px;
+            padding: 50px;
+            background-image: url("../resources/image/bgsample.PNG");
+
+            /* 이미지 반복 설정 */
+            /* background-repeat: repeat; */
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            background-repeat: no-repeat;
+
+            /* 이미지 크기 설정 */
+            /* background-size: auto; */
+            /* background-size: contain; */
+            /* background-size: cover; */
+            /* background-size: 300px 200px; */
+            /* background-size: 100% 100%; */
+
+            /* 이미지의 위치 설정 */
+            /* background-position: left top; */
+            /* background-position: right top; */
+            /* background-position: center top; */
+            /* background-position: left center; */
+            /* background-position: right center; */
+            /* background-position: center center; */
+            /* background-position: center; */
+            /* background-position: left bottom; */
+            /* background-position: right bottom; */
+            /* background-position: center bottom; */
+            /* background-position: 200px 100px; */
+            /* background-position: 50% 50%; */
+
+            /* 이미지의 배치 기준 설정 */
+            /* background-origin: padding-box; */
+            /* background-origin: border-box; */
+            /* background-origin: content-box; */
+
+            /* 이미지를 고정하도록 설정 */
+            /* background-attachment: scroll; */
+            background-attachment: fixed;
+
+
+        }
+    </style>
+</head>
+<body>
+    <h1>색상 스타일</h1>
+
+    <hr>
+
+    <h2>background-color</h2>
+    <div id="div-bg">
+        SK텔레콤이 창립 37년 만에 통신회사와 투자회사로 쪼개지면서 1일부터 'SKT 2.0 시대'가 열린다. 이날 출범하는 투자전문회사 ‘SK스퀘어’를 중심으로 반도체를 비롯한 테크·플랫폼 영역에서 국경을 뛰어넘는 인수합병(M&A) 행보도 본격화할 전망이다.
+
+        31일 업계에 따르면 존속회사인 SK텔레콤과 신설회사인 SK스퀘어는 1일 공식 출범한다. 현 SK텔레콤은 주식 매매거래정지 기간(10월26일~11월26일)을 거쳐 11월29일에 SK텔레콤, SK스퀘어로 각각 변경상장, 재상장 된다.
+        
+        향후 SK텔레콤은 기존 유뮤선 통신을 기반으로 한 인공지능(AI)·디지털인프라 영역에, 신설회사는 반도체를 중심으로 한 ICT 투자에 집중하게 된다. 통신과 반도체를 중심으로 각 영역에 적합한 성장구조와 투자 기반을 갖춤으로써 제대로 된 기업가치를 인정받겠다는 계획이다. 공정거래법에 따른 규제로 투자 확대에 제약을 받아온 SK하이닉스의 투자 여건을 개선하기 위한 것이기도 하다.
+    </div>
+
+    <hr>
+
+    <h2>background-clip</h2>
+    <div class="div-clip" id="div-clip1">
+        SK텔레콤이 창립 37년 만에 통신회사와 투자회사로 쪼개지면서 1일부터 'SKT 2.0 시대'가 열린다. 이날 출범하는 투자전문회사 ‘SK스퀘어’를 중심으로 반도체를 비롯한 테크·플랫폼 영역에서 국경을 뛰어넘는 인수합병(M&A) 행보도 본격화할 전망이다.
+
+        31일 업계에 따르면 존속회사인 SK텔레콤과 신설회사인 SK스퀘어는 1일 공식 출범한다. 현 SK텔레콤은 주식 매매거래정지 기간(10월26일~11월26일)을 거쳐 11월29일에 SK텔레콤, SK스퀘어로 각각 변경상장, 재상장 된다.
+        
+        향후 SK텔레콤은 기존 유뮤선 통신을 기반으로 한 인공지능(AI)·디지털인프라 영역에, 신설회사는 반도체를 중심으로 한 ICT 투자에 집중하게 된다. 통신과 반도체를 중심으로 각 영역에 적합한 성장구조와 투자 기반을 갖춤으로써 제대로 된 기업가치를 인정받겠다는 계획이다. 공정거래법에 따른 규제로 투자 확대에 제약을 받아온 SK하이닉스의 투자 여건을 개선하기 위한 것이기도 하다.
+    </div>
+
+    <div class="div-clip" id="div-clip2">
+        SK텔레콤이 창립 37년 만에 통신회사와 투자회사로 쪼개지면서 1일부터 'SKT 2.0 시대'가 열린다. 이날 출범하는 투자전문회사 ‘SK스퀘어’를 중심으로 반도체를 비롯한 테크·플랫폼 영역에서 국경을 뛰어넘는 인수합병(M&A) 행보도 본격화할 전망이다.
+
+        31일 업계에 따르면 존속회사인 SK텔레콤과 신설회사인 SK스퀘어는 1일 공식 출범한다. 현 SK텔레콤은 주식 매매거래정지 기간(10월26일~11월26일)을 거쳐 11월29일에 SK텔레콤, SK스퀘어로 각각 변경상장, 재상장 된다.
+        
+        향후 SK텔레콤은 기존 유뮤선 통신을 기반으로 한 인공지능(AI)·디지털인프라 영역에, 신설회사는 반도체를 중심으로 한 ICT 투자에 집중하게 된다. 통신과 반도체를 중심으로 각 영역에 적합한 성장구조와 투자 기반을 갖춤으로써 제대로 된 기업가치를 인정받겠다는 계획이다. 공정거래법에 따른 규제로 투자 확대에 제약을 받아온 SK하이닉스의 투자 여건을 개선하기 위한 것이기도 하다.
+    </div>
+
+    <div class="div-clip" id="div-clip3">
+        SK텔레콤이 창립 37년 만에 통신회사와 투자회사로 쪼개지면서 1일부터 'SKT 2.0 시대'가 열린다. 이날 출범하는 투자전문회사 ‘SK스퀘어’를 중심으로 반도체를 비롯한 테크·플랫폼 영역에서 국경을 뛰어넘는 인수합병(M&A) 행보도 본격화할 전망이다.
+
+        31일 업계에 따르면 존속회사인 SK텔레콤과 신설회사인 SK스퀘어는 1일 공식 출범한다. 현 SK텔레콤은 주식 매매거래정지 기간(10월26일~11월26일)을 거쳐 11월29일에 SK텔레콤, SK스퀘어로 각각 변경상장, 재상장 된다.
+        
+        향후 SK텔레콤은 기존 유뮤선 통신을 기반으로 한 인공지능(AI)·디지털인프라 영역에, 신설회사는 반도체를 중심으로 한 ICT 투자에 집중하게 된다. 통신과 반도체를 중심으로 각 영역에 적합한 성장구조와 투자 기반을 갖춤으로써 제대로 된 기업가치를 인정받겠다는 계획이다. 공정거래법에 따른 규제로 투자 확대에 제약을 받아온 SK하이닉스의 투자 여건을 개선하기 위한 것이기도 하다.
+    </div>
+
+    <hr>
+
+    <h2>
+        background-image,
+        background-repeat,
+        background-size,
+        background-position,
+        background-origin,
+        background-attachiment
+    </h2>
+
+    <div id="div-bg-img"></div>
+
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+</body>
+</html>

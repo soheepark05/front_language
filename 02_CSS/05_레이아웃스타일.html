@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일</title>
+
+    <link rel="stylesheet" href="./05_레이아웃스타일.css">
+</head>
+<body>
+    <h1>레이아웃 스타일</h1>
+
+    <h2>기본스타일</h2>
+
+    <h3>width, height</h3>
+    <h4>고정 크기</h4>
+    <div id="fixed-size" class="size-test">
+    </div>
+
+    <h4>가변 크기</h4>
+    <div id="variable-size" class="size-test"></div>
+
+    <hr>
+
+    <h3>화면 배치 방법 변경</h3>
+    <p>
+        블록 요소와 인라인 요소의 속성을 변경하여 배치 방식을 변경할 수 있다.
+    </p>
+
+    <h4>블록 요소를 인라인 요소로 변경</h4>
+    <p>display: inline</p>
+    <div id="area1" class="display display-inline">1 번째 영역</div>
+    <div id="area2" class="display display-inline">2 번째 영역</div>
+    <div id="area3" class="display display-inline">3 번째 영역</div>
+    <div id="area4" class="display display-inline">4 번째 영역</div>
+    <div id="area5" class="display display-inline">5 번째 영역</div>
+
+    <p>display: inline-block</p>
+    <div id="area1" class="display display-inline-block">1 번째 영역</div>
+    <div id="area2" class="display display-inline-block">2 번째 영역</div>
+    <div id="area3" class="display display-inline-block">3 번째 영역</div>
+    <div id="area4" class="display display-inline-block">4 번째 영역</div>
+    <div id="area5" class="display display-inline-block">5 번째 영역</div>
+
+    <h4>인라인 요소를 블록 요소로 변경</h4>
+    <p>display: block</p>
+    <span id="area1" class="display display-block">1 번째 영역</span>
+    <span id="area2" class="display display-block">2 번째 영역</span>
+    <span id="area3" class="display display-block">3 번째 영역</span>
+    <span id="area4" class="display display-block">4 번째 영역</span>
+    <span id="area5" class="display display-block">5 번째 영역</span>
+
+    <hr>
+
+    <h2>테두리 스타일</h2>
+
+    <div class="border" id="border-test1"></div><br>
+    <div class="border" id="border-test2"></div><br>
+    <div class="border" id="border-test3"></div><br>
+    <div class="border" id="border-test4"></div><br>
+    <div class="border" id="border-test5"></div><br>
+    <div class="border" id="border-test6"></div><br>
+    <div class="border" id="border-test7"></div><br>
+    <div class="border" id="border-test8"></div><br>
+    <div class="border" id="border-test9"></div><br>
+    <div class="border" id="border-test10"></div><br>
+
+    <hr>
+
+    <h2>여백 스타일</h2>
+
+    <div class="space">기준 div</div>
+
+    <h3>padding</h3>
+    <p>테두리와 콘텐츠 영역 사이의 거리 조절</p>
+    <div class="space" id="padding1">전체 padding</div>
+    <br>
+    <div class="space" id="padding2">부분 padding</div>
+
+    <br>
+    
+    <!-- 
+    <span class="space" id="padding1" style="display: inline-block;">전체 padding</span>
+    
+    <br>
+    <span class="space" id="padding2" style="display: inline-block;">부분 padding</span>
+    -->
+
+    <hr>
+
+    <h3>margin</h3>
+    <p>다른 요소들 간의 간격 조절</p>
+    <div class="space" id="margin1">전체 margin</div>
+    <div class="space" id="margin2">부분 margin</div>
+    <!-- 
+    <span class="space" id="margin1" style="display: inline-block;">전체 margin</span>
+    <span class="space" id="margin2" style="display: inline-block;">부분 margin</span> 
+    -->
+
+    <hr>
+
+    <h2>포지셔닝</h2>
+    <h4>절대 위치와 상대 위치</h4>
+
+    <div class="outer">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </div>
+
+    <h4>고정 위치</h4>
+    <!-- <div id="fixed-area"></div> -->
+
+    <hr>
+
+    <h3>visibility</h3>
+    <div class="visibility" id="v-test1"></div>
+    <div class="visibility" id="v-test2"></div>
+    <div class="visibility" id="v-test3"></div>
+
+    <hr>
+
+    <h3>z-index</h3>
+    <div id="z-outer">
+        <div class="z-test" id="z1"></div>
+        <div class="z-test" id="z2"></div>
+        <div class="z-test" id="z3"></div>
+    </div>
+
+    <hr>
+
+    <h3>float, clear</h3>
+    <div class="float-test"></div>
+    <div class="float-test"></div>
+    <div class="float-test"></div>
+    <div class="float-test"></div>
+
+    <hr style="clear: both;">
+
+    <h2>다단 스타일</h2>
+    <h3>단의 너비를 이용하여 단 나누기</h3>
+    <div class="column-wrap" id="column1">
+        <h4>SKT 37년만에 쪼개진다</h4>
+
+        <p>
+            SK텔레콤이 창립 37년 만에 통신회사와 투자회사로 쪼개지면서 1일부터 'SKT 2.0 시대'가 열린다. 이날 출범하는 투자전문회사 ‘SK스퀘어’를 중심으로 반도체를 비롯한 테크·플랫폼 영역에서 국경을 뛰어넘는 인수합병(M&A) 행보도 본격화할 전망이다.
+
+            31일 업계에 따르면 존속회사인 SK텔레콤과 신설회사인 SK스퀘어는 1일 공식 출범한다. 현 SK텔레콤은 주식 매매거래정지 기간(10월26일~11월26일)을 거쳐 11월29일에 SK텔레콤, SK스퀘어로 각각 변경상장, 재상장 된다.
+            
+            향후 SK텔레콤은 기존 유뮤선 통신을 기반으로 한 인공지능(AI)·디지털인프라 영역에, 신설회사는 반도체를 중심으로 한 ICT 투자에 집중하게 된다. 통신과 반도체를 중심으로 각 영역에 적합한 성장구조와 투자 기반을 갖춤으로써 제대로 된 기업가치를 인정받겠다는 계획이다. 공정거래법에 따른 규제로 투자 확대에 제약을 받아온 SK하이닉스의 투자 여건을 개선하기 위한 것이기도 하다.
+            
+            박정호 최고경영자(CEO)는 지난달 임시 주주총회에서 "반도체·플랫폼 혁신기업 투자를 통해 성장 역량 발휘하겠다"며 "두 회사 모두 ‘통신’과 ‘투자’라는 명확한 아이덴티티 하에 더욱 빠른 성장 스토리를 쌓을 것"이라고 밝혔다.
+
+            SK스퀘어는 SK하이닉스 부회장을 겸임 중인 박 CEO가 이끌게 된다. 기존 SK텔레콤 자회사 중 SK하이닉스를 비롯한 신사업 영역 대부분이 SK스퀘어 산하로 편제됐다. 대상 회사는 SK하이닉스, ADT캡스, 11번가, 티맵모빌리티, 원스토어, 콘텐츠웨이브, 드림어스컴퍼니, SK플래닛, FSK L&S, 인크로스, 나노엔텍, 스파크플러스, SK Telecom CST1, SK Telecom TMT Investment, ID Quantique, Techmaker 다. 지금까지 반도체, ICT 플랫폼 사업 투자를 통해 축적된 투자 성공 DNA를 바탕으로 현재 26조 원인 순자산가치를 2025년 약 3배에 달하는 75조 원으로 키운다는 비전이다.
+
+            존속회사인 SK텔레콤은 ‘AI·디지털인프라 컴퍼니’로 거듭나는 것을 목표로 하고 있다. 2020년 15조 원의 연간 매출을 2025년 22조 원까지 늘린다는 계획이다. 이를 위해 3대 핵심 사업인 유무선통신, AI 기반 서비스, 디지털인프라 서비스에 집중하기로 했다. 산하에는 유무선통신 사업에 시너지를 낼 수 있는 SK브로드밴드, SK텔링크, 피에스앤마케팅, F&U신용정보, 서비스탑, 서비스에이스, SK오앤에스 등이 위치한다. 신임 CEO는 유영상 이동통신(MNO) 사업대표가 유력하다.
+
+            이번 분할을 기점으로 조만간 테크·플랫폼 영역에서 글로벌 M&A가 줄이을 것으로 예상된다. M&A전문가인 박 CEO는 앞서 국내외 투자자들과 만난 자리에서 신설회사 출범 후 3년간 5조원을 투자할 것이라고 밝혔다. 가장 우선적으로 예고한 것은 반도체 투자다. 그룹 핵심 먹거리이자 신설회사 자회사인 SK하이닉스와의 시너지 창출에 초점을 맞춘 것이다. 그간 SK하이닉스는 공정거래법상 지주회사의 손자회사로서 인수합병 시 인수 대상 기업의 지분 100%를 보유해야만 해 투자 확대에 제약이 있었다.
+
+            또한 SK스퀘어는 반도체 등 하이테크 영역 외에도 ▲미디어·커머스·모빌리티 등 ‘빅테크’(라이프 플랫폼) ▲디지털 헬스케어·블록체인 등 ‘딥테크’(글로벌ICT)에서도 투자 기회를 살피고 있다. 이를 통해 2025년 기업 순자산가치를 현재의 3배 수준인 75조원대까지 끌어올린다는 게 목표다.
+
+            존속회사 SK텔레콤은 유·무선 통신과 AI 기반 서비스, 디지털인프라 서비스 등에 집중한다. 구독사업과 메타버스 플랫폼 등의 신사업도 고도화한다. 2020년 약 15조 원이었던 연간 매출액을 2025년 22조원으로 늘린다는 목표를 세웠다.
+        </p>
+    </div>
+    
+    <h3>단의 개수를 이용하여 단 나누기</h3>
+    <div class="column-wrap" id="column2">
+        <h4>SKT 37년만에 쪼개진다</h4>
+        
+        <p>
+            SK텔레콤이 창립 37년 만에 통신회사와 투자회사로 쪼개지면서 1일부터 'SKT 2.0 시대'가 열린다. 이날 출범하는 투자전문회사 ‘SK스퀘어’를 중심으로 반도체를 비롯한 테크·플랫폼 영역에서 국경을 뛰어넘는 인수합병(M&A) 행보도 본격화할 전망이다.
+
+            31일 업계에 따르면 존속회사인 SK텔레콤과 신설회사인 SK스퀘어는 1일 공식 출범한다. 현 SK텔레콤은 주식 매매거래정지 기간(10월26일~11월26일)을 거쳐 11월29일에 SK텔레콤, SK스퀘어로 각각 변경상장, 재상장 된다.
+            
+            향후 SK텔레콤은 기존 유뮤선 통신을 기반으로 한 인공지능(AI)·디지털인프라 영역에, 신설회사는 반도체를 중심으로 한 ICT 투자에 집중하게 된다. 통신과 반도체를 중심으로 각 영역에 적합한 성장구조와 투자 기반을 갖춤으로써 제대로 된 기업가치를 인정받겠다는 계획이다. 공정거래법에 따른 규제로 투자 확대에 제약을 받아온 SK하이닉스의 투자 여건을 개선하기 위한 것이기도 하다.
+            
+            박정호 최고경영자(CEO)는 지난달 임시 주주총회에서 "반도체·플랫폼 혁신기업 투자를 통해 성장 역량 발휘하겠다"며 "두 회사 모두 ‘통신’과 ‘투자’라는 명확한 아이덴티티 하에 더욱 빠른 성장 스토리를 쌓을 것"이라고 밝혔다.
+
+            SK스퀘어는 SK하이닉스 부회장을 겸임 중인 박 CEO가 이끌게 된다. 기존 SK텔레콤 자회사 중 SK하이닉스를 비롯한 신사업 영역 대부분이 SK스퀘어 산하로 편제됐다. 대상 회사는 SK하이닉스, ADT캡스, 11번가, 티맵모빌리티, 원스토어, 콘텐츠웨이브, 드림어스컴퍼니, SK플래닛, FSK L&S, 인크로스, 나노엔텍, 스파크플러스, SK Telecom CST1, SK Telecom TMT Investment, ID Quantique, Techmaker 다. 지금까지 반도체, ICT 플랫폼 사업 투자를 통해 축적된 투자 성공 DNA를 바탕으로 현재 26조 원인 순자산가치를 2025년 약 3배에 달하는 75조 원으로 키운다는 비전이다.
+
+            존속회사인 SK텔레콤은 ‘AI·디지털인프라 컴퍼니’로 거듭나는 것을 목표로 하고 있다. 2020년 15조 원의 연간 매출을 2025년 22조 원까지 늘린다는 계획이다. 이를 위해 3대 핵심 사업인 유무선통신, AI 기반 서비스, 디지털인프라 서비스에 집중하기로 했다. 산하에는 유무선통신 사업에 시너지를 낼 수 있는 SK브로드밴드, SK텔링크, 피에스앤마케팅, F&U신용정보, 서비스탑, 서비스에이스, SK오앤에스 등이 위치한다. 신임 CEO는 유영상 이동통신(MNO) 사업대표가 유력하다.
+
+            이번 분할을 기점으로 조만간 테크·플랫폼 영역에서 글로벌 M&A가 줄이을 것으로 예상된다. M&A전문가인 박 CEO는 앞서 국내외 투자자들과 만난 자리에서 신설회사 출범 후 3년간 5조원을 투자할 것이라고 밝혔다. 가장 우선적으로 예고한 것은 반도체 투자다. 그룹 핵심 먹거리이자 신설회사 자회사인 SK하이닉스와의 시너지 창출에 초점을 맞춘 것이다. 그간 SK하이닉스는 공정거래법상 지주회사의 손자회사로서 인수합병 시 인수 대상 기업의 지분 100%를 보유해야만 해 투자 확대에 제약이 있었다.
+
+            또한 SK스퀘어는 반도체 등 하이테크 영역 외에도 ▲미디어·커머스·모빌리티 등 ‘빅테크’(라이프 플랫폼) ▲디지털 헬스케어·블록체인 등 ‘딥테크’(글로벌ICT)에서도 투자 기회를 살피고 있다. 이를 통해 2025년 기업 순자산가치를 현재의 3배 수준인 75조원대까지 끌어올린다는 게 목표다.
+
+            존속회사 SK텔레콤은 유·무선 통신과 AI 기반 서비스, 디지털인프라 서비스 등에 집중한다. 구독사업과 메타버스 플랫폼 등의 신사업도 고도화한다. 2020년 약 15조 원이었던 연간 매출액을 2025년 22조원으로 늘린다는 목표를 세웠다.
+        </p>
+    </div>
+
+    <hr>
+    <h2>표 스타일</h2>
+
+    <table>
+        <caption>성적표</caption>
+        <tr>
+            <td>구분</td>
+            <td>점수</td>
+        </tr>
+        <tr>
+            <td>수학</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>국어</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>asdzxczxczczxcxzczxczxczxczxczxczxczxczxcfetrgerkljvdfl;kgjroigjkfl;jbklr;jgivklbjiofgjklre;gjfkl;bjirgklf;kbvjol;isarjtgklf;jibvkl;bksdjgirlkwqjowijrfgklfdjbkvljifjtklvbifjglrijkvl;jsirgjklvjklssdfsrtgdsfgdfsefd</td>
+        </tr>
+    </table>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+</body>
+</html>
