@@ -1,5 +1,3 @@
-<!-- 정리 아직 낫 옛-->
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>폼 관련 태그</title>
 </head>
-<br>
+<body>
+    <h1>정리 아직 안됐는데 내일 시험이야 아아ㅏㅇ아</h1>
     <h1>폼 관련 태그</h1>
     <!--  
         <form> 태그
@@ -67,54 +66,281 @@
 
     <h3>텍스트와 관련된 input 태그들</h3>
 
-    <br>
+    <form>
         <h4>type="text"</h4>
-
         <p>
-            - 한줄 짜리 텍스트를 입력할 수 있는 텍스트 상자이다. 
+            - 한 줄짜리 텍스트를 입력할 수 있는 텍스트 상자이다.
         </p>
 
-        <label>
-        아이디:<input type ="text" size="20" value="kh"
-        maxlength="10" placeholder="아이디를 입력해주세요">
+        <label> 
+            아이디 : <input type="text" size="20" value="kh" name="userId"
+                        maxlength="10" placeholder="아이디를 입력해주세요.">
         </label>
 
-        <h4>type="password"</h4>
+        <h4>type="text"에서 새로 추가된 기능</h4>
+        <p>
+            datalist 태그를 사용하여 텍스트 필드에서 데이터 목록 중에서 값을 선택하도록 만들 수 있다.
+        </p>
+        
+        <label>
+            색상 : <input type="text" name="color" list="myColors">
+        </label>
 
+        <datalist id="myColors">
+            <option value="black">검정색</option>
+            <option value="white">흰색</option>
+            <option value="skyblue">하늘색</option>
+        </datalist>
+
+        <h4>type="password"</h4>
         <p>
             - 비밀번호를 입력할 수 있는 텍스트 상자이다.
         </p>
-        <label>
-            비밀번호: <input type="password" name="userPwd" size="20"
-                    maxlength="15" placeholder="비밀번호를 입력하세요. " required>
-        </label>
-        <h4>type="search", type = "url" , type = "email",type="tel"</h4>
 
+        <label>
+            비밀번호 : <input type="password" name="userPwd" size="20"
+                        maxlength="15" placeholder="비밀번호를 입력하세요." required>
+        </label>
+
+        <h4>type="search",  type="url", type="email", type="tel"</h4>
 
         <p>
-            겉모습은 텍스트 필드와 비슷하지만 각각의 정보에 맞게 세분화 된 기능을 제공하는 텍스트 상자이다.
+            겉모습은 텍스트필드와 비슷하지만 각각의 정보에 맞게 세분화된 기능을 제공하는 텍스트 상자이다.
         </p>
+
         <label>
-            검색 : <input type ="search"  name = "searchText" placeholder="검색할 내용 입력">
-        </label>
-        <br></br>
-        <label>
-            홈페이지 : <input type ="url"  name = "homePage" value="https://">
-        </label>
-        <br><br>
-        <label>
-            이메일 : <input type ="email"  name = "email" placeholder="이메일을 입력하세요">
+            검색 : <input type="search" name="searchText" placeholder="검색할 내용 입력">
         </label>
 
         <br><br>
+        
         <label>
-            전화번호 : <input type ="tel"  name = "phone" placeholder="전화번호을 입력하세요">
+            홈페이지 : <input type="url" name="homePage" value="https://">
+        </label>
+        
+        <br><br>
+
+        <label>
+            이메일 : <input type="email" name="email" placeholder="이메일을 입력하세요.">
         </label>
 
-        <P></P>
+        <br><br>
 
-        <input type="submit" value="전송">
+        <label>
+            전화번호 : <input type="tel" name="phone" placeholder="전화번호를 입력하세요.">
+        </label>
+
+        <p></p>
+        
+        <input type="submit" value="전송"> 
         <input type="reset" value="다시입력">
     </form>
+
+    <hr>
+
+    <h3>숫자와 관련된 input 태그들</h3>
+
+    <form>
+        <h4>type="number"</h4>
+        <p>
+            입력창에 숫자를 입력하는 것이 기본이지만, 브라우저에 따라서 스핀 박스가 표시되기도 한다.
+            (스핀 박스 : 입력창 오른쪽에 위/아래 화살표 버튼)
+        </p>
+
+        <label>
+            수량 : <input type="number" name="amount" value="10" step="10" 
+                        min="0" max="100">
+        </label>
+
+        <h4>type="range"</h4>
+        <p>
+            슬라이드바를 통한 숫자 지정 가능
+        </p>
+
+        <input type="range" name="point" value="100"
+                min="0" max="1000" step="100" style="width: 300px;">
+
+        <br><br>
+
+        <input type="submit" value="전송"> 
+        <input type="reset" value="다시입력">
+    </form>
+
+    <hr>
+
+    <h3>날짜/시간 관련된 input 태그</h3>
+    <form>
+        <h4>type="date|month|week|time|datetime|datetime-local"</h4>
+
+        <label for="dateIn">data : </label> 
+        <input type="date" name="dateIn" id="dateIn" value="2021-05-25">
+        
+        <br><br>
+
+        <label for="monthIn">month : </label>
+        <input type="month" name="monthIn" id="monthIn" value="2021-05">
+
+        <br><br>
+
+        <label for="weekIn">week : </label>
+        <input type="week" name="weekIn" id="weekIn">
+
+        <br><br>
+
+        <label for="timeIn">time : </label>
+        <input type="time" name="timeIn" id="timeIn" value="23:30">
+
+        <br><br>
+
+        <!-- 크롬, 엣지 지원 X -> datetime-local로 대체-->
+        <label for="datetimeIn">datetime : </label>
+        <input type="datetime" name="datetimeIn" id="datetimeIn">
+
+        <br><br>
+        
+        <label for="dtIn">datetime-local : </label>
+        <input type="datetime-local" name="dtIn" id="dtIn" value="2021-05-25T23:30:30">
+        
+        <br><br>
+
+        <input type="submit" value="전송"> 
+        <input type="reset" value="다시입력">
+    </form>
+
+    <hr>
+
+    <h3>라디오 버튼과 체크박스 태그</h3>
+
+    <form>
+        <h4>type="radio"</h4>
+        <p>
+            여러 항목 중 한 가지만 선택해야 할 경우에 사용하는 태그이다.<br>
+            라디오 버튼의 경우 관련된 버튼끼리는 name 속성이 같아야 하나만 선택이 가능하다.
+            value 속성은 선택한 라디오 버튼이나 체크박스의 서버로 넘길 값을 지정한다.
+            checked 속성은 기본적으로 선택할 항목이 있다면 사용한다.
+        </p>
+
+        <label>성별 : </label>
+        <label><input type="radio" name="gender" value="M">남자</label>
+        <label><input type="radio" name="gender" value="F" checked>여자</label>
+
+        <h4>type="checkbox"</h4>
+
+        <label>취미 : </label>
+        <p>
+            여러 항목 중 여러 가지 항목을 선택해야 할 경우에 사용하는 태그이다.<br>
+            체크박스의 경우 관련된 체크박스 끼리는 name 속성이 같아야한다.
+            value 속성은 선택한 라디오 버튼이나 체크박스의 서버로 넘길 값을 지정한다.
+            checked 속성은 기본적으로 선택할 항목이 있다면 사용한다.
+        </p>
+        <label><input type="checkbox" name="hobby" value="baseball" checked>야구</label>
+        <label><input type="checkbox" name="hobby" value="football">축구</label>
+        <label><input type="checkbox" name="hobby" value="basketball">농구</label>
+        <label><input type="checkbox" name="hobby" value="game">게임</label>
+
+        <br><br>
+
+        <input type="submit" value="전송"> 
+        <input type="reset" value="다시입력">
+    </form>
+    
+    <hr>
+
+    <h3>추가 input 태그들</h3>
+
+    <form>
+        <h4>type="color"</h4>
+        <label for="color">색상 선택 : </label>
+        <input type="color" name="color" id="color">
+
+        <h4>type="file"</h4>
+        <label for="file">파일 선택 : </label>
+        <input type="file" name="uploadfile" id="file">
+
+        <h4>type="hidden"</h4>
+        <label for="hiddenValue">안 보임 : </label>
+        <!-- 특정 값을 화면에 노출시키지 않고 싶은 경우 사용 -->
+        <input type="hidden" name="hiddenValue" id="hiddenValue" value="10">
+
+
+        <h4>type="button", type="submit", type="reset"</h4>
+        <input type="button" value="버튼">
+        <input type="submit" value="전송"> 
+        <input type="reset" value="다시입력">
+
+        <h4>button 태그를 사용</h4>
+        <button>전송</button>
+        <button type="submit"><i><b>전송</b></i></button>
+        <button type="reset">다시입력</button>
+        <button type="button">버튼</button>
+    </form>
+
+    <hr>
+
+    <h3>여러 값 표현 태그</h3>
+
+    <form>
+        <h4>select 태그와 option 태그</h4>
+        <p>
+            사용자가 내용을 입력하는 것이 아니고 여러 옵션 중에서 선택하게 하고 싶을 때 사용하는 드롭 다운 목록이다.
+        </p>
+
+        <label for="national">국적 : </label>
+        <select name="national" id="national">
+            <optgroup label="아시아">
+                <option value="ko">한국</option>
+                <option value="ch">중국</option>
+                <option value="jp">일본</option>
+            </optgroup>
+            <optgroup label="아메리카">
+                <option value="en" label="미국"></option>
+            </optgroup>
+            <optgroup label="유럽">
+                <option value="fr" label="프랑스"></option>
+            </optgroup>
+            <option selected>-----</option>
+        </select>
+
+        <h4>textarea 태그</h4>
+        <p>
+            type="text"와 비슷하지만 여러 줄의 문자를 입력할 수 있다.
+        </p>
+
+        <textarea name="textarea" id="textarea" cols="45" rows="15"
+            style="resize: none;" placeholder="내용을 입력해 주세요."></textarea>
+
+        <h4>progress</h4>
+        <p>
+            작업 진행 상태를 나타내는 태그이다.<br>
+            작업 시작을 0으로 하고 최대값에서 얼마나 진행되었는지 표시한다.
+        </p>
+        <progress value="30" max="100"></progress>
+
+
+        <h4>meter</h4>
+        <meter min="0" max="100" value="66" low="60" high="70"></meter>
+
+        <br><br>
+
+        <input type="submit" value="전송"> 
+        <input type="reset" value="다시입력">
+    </form>
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
 </body>
 </html>
