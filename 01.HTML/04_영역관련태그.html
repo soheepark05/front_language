@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영역관련태그</title>
-    <style>
+    <style>/*스타일 태그임*/
         div{
-            border : 1px solid brown;
+            border : 3px solid brown;
             width : 100px;
             height : 100px;
         }
@@ -23,44 +23,100 @@
     </style>
 </head>
 <body>
-    <!--
+      <!--
         블럭 요소
-        - 한 줄 단위로 영역을 차지하는 요소(너비가 100%)
-        - 새로운 블록 요소는 새로운 라인에 영역이 잡힌다.(두 블록 간에는 겹치는 일이 없다.)
-        - p,pre,div,...
+            - 한 줄 단위로 영역을 차지하는 요소 (너비가 100%)
+            - 새로운 블록 요소는 새로운 라인에 영역이 잡힌다. (두 블록 간에는 겹치는 일이 없다.)
+            - p, pre, div, ...
         인라인 요소
-        - 내용에 해당하는 부분만 영역을 차지하는 요소
-        - 줄 바꿈이 적용되지 않아 옆으로 영역이 잡힌다(다음줄로 넘기고자 한다면 직접 br태그를 넣어줘야한다.)
-
-        <div> : 블록 요소의 태그로 레이아웃 분할을 위해 사용한다.
-        <p> : 블록 요소의 태그로 문단 영역을 지정하는 용도로 사용한다.
-        <span>: 인라인 요소의 태그로 컨텐츠를 감싸는 역할을 하는 태그이다..
+            - 내용에 해당하는 부분만 영역을 차지하는 요소
+            - 줄 바꿈이 적용되지 않아 옆으로 영역이 잡힌다. (다음 줄로 넘기고자 한다면 직접 br 태그를 넣어줘야 한다.)
+            - span, label, ...
+        <div>  : 블록 요소의 태그로 레이아웃 분할을 위해 사용한다.
+        <p>    : 블록 요소의 태그로 문단 영역을 지정하는 용도로 사용한다.
+        <span> : 인라인 요소의 태그로 컨텐츠를 감싸는 역할을 하는 태그이다. 
     -->
     <h1>영역 관련 태그</h1>
 
-    <h3>div태그와 span 태그의 차이 1</h3>
-    <h4>dic 태그</h4>
+    <h3>div 태그와 span 태그의 차이 1</h3>
 
-    <p>div 태그 영역은 이미 존재하는 태그 다음 줄에 영역이 설정된다
-        (block 요소: 공간을 수직으로 분할)
+    <h4>----------------div 태그---------------</h4>
+    <p>
+        div 태그 영역은 이미 존재하는 태그 다음 줄에 영역이 설정된다.
+
+        그니까 줄바꿈이 일어난다는 이야기.
+        <br>
+        (block 요소 : 공간을 수직으로 분할)
     </p>
-    <div>        
+
+    <div>
         첫 번째 영역
     </div>
-    <div>        
+
+    <div>
         두 번째 영역
     </div>
-    <div>        
+
+    <div>
         세 번째 영역
     </div>
 
-    <h3>div태그와 span 태그의 차이</h3>
-    <h4></h4>
-
-    <h4>span 태그</h4>
+    <h4>---------------span 태그---------------</h4> 
     <p>
         span 태그 영역은 줄바꿈이 일어나지 않고 옆으로 영역이 설정된다.
     </p>
+
+    <span>
+        첫 번째 영역
+    </span>
+
+    <span>
+        두 번째 영역
+    </span>
+
+    <span>
+        세 번째 영역
+    </span>
+
+    <h3>div 태그와 span 태그의 차이 2</h3>
+    <h4>div 태그 : 사각형 박스로 영역을 지정</h4>
+    <div>
+        동해 물과 백두산이 마르고 닳도록 <br>
+        하느님이 보우하사 우리나라 만세. <br>
+    </div>
+    
+    <p></p>
+    
+    <h4>span 태그 : 문장 단위로 영역을 지정</h4>
+    <span>
+        동해물과 백두산이 마르고 닳도록 <br> <!--한문장이니까 띄고-->
+        하느님이 보우하사 우리나라 만세. <br>
+        무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세
+    </span>
+
+    <hr>
+
+    <h3>iframe</h3>
+    
+    <!--iframe: inline frame 의 약자 -->
+    <!--  iframe 요소는 명시된 크기로 삽입되는 창의 크기가 고정된다.. -->
+    <iframe src="03_표관련태그.html" name="frame_target" width="650px" height="600px">
+    </iframe>
+    <!-- 밑에 처럼 하면 iframe안에있는 페이지가 다른 페이지로 전환된다.-->
+    <p>
+        <a href="02_목록관련태그.html" target="frame_target">목록 관련 태그로 이동하기</a>
+    </p>
+    
+    <!-- 
+        상대 경로를 이용한 파일 찾기
+        <iframe src="../03_표관련태그 copy.html" width="650px" height="600px"></iframe>
+        절대 경로를 이용한 파일 찾기
+        <iframe src="D:\develop\front\03_표관련태그 copy.html" width="650px" height="600px"></iframe> 
+    -->
+
+    <p></p>
+
+    <iframe width="1000" height="500" src="https://www.youtube.com/embed/nTvTD6uCzPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
 
