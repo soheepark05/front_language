@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>미디어 관련 태그</title>
 </head>
+<style>
+    .hrsize{ /*수평선색깔지정하기 클래스라고 바디에 태그해야한다.*/
+        border: 0;
+        height: 1px;
+        background: orange;
+    }
+</style>
 <body>
     <h1>미디어 관련 태그</h1>
     <!--
         html5부터는 플러그인 기능을 사용하지 않고 미디어(비디오, 오디오)를 직접
         html문서에서 실행시킬 수 있는 태그를 제공한다.
     -->
+
     <h3>오디오 관련 태그</h3>
     <!--
         오디오 태그 속성
@@ -22,6 +30,8 @@
         - preload : 미리 오디오 파일을 다운로드할지 여부
     -->
     <audio src="../resources/audio/major.mp3" controls loop=""></audio>
+
+    <hr class ="hrsize">
 
     <h3>비디오 관련 태그</h3>
     <!--
@@ -35,6 +45,7 @@
             - width / height : 비디오 태그의 너비와 높이 지정
 
     -->
-    <video src="../resources/video/video1.mp4" controls loop poster="../resources/image/city1.PNG" width="300" height="200"></video>
+    <video src="../resources/video/video1.mp4" controls loop poster="../resources/image/city1.PNG"
+     width="300" height="200"></video>
 </body>
 </html>
