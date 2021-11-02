@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div, form, input, img{
+            /* border:1px solid red; */
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            width:1000px;
+            height:800px;
+            margin:auto;
+        }
+
+        /* 크게 4가지 영역에 대한 구조 */
+        .wrap>*{width:100%;}
+        #header{height:15%;}
+        #navigator{height:5%;}
+        #content{height:65%;}
+        #footer{height:15%;}
+
+        /* header 영역에 대한 전반적인 구조 */
+        #header>div{height:100%; float:left;}
+        #header_1{width:20%; position:relative;}
+        #header_2{width:65%; position:relative;}
+        #header_3{width:15%;}
+
+        /* header 영역 안의 세부 스타일 */
+        #header img{
+            width:80%;
+            height:70%;
+            position:absolute;
+            margin: auto;
+            top : 0;
+            bottom:0;
+            left: 0;
+            right: 0;
+        }
+
+        /* navigator 영역에 대한 세부 스타일 */
+        #navigator{
+            background-color:rgb(100, 170, 20);
+            margin:5px 0px;
+        }
+        #navigator>ul{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+            height:100%;
+        }
+        #navigator li{
+            float:left;
+            width:25%;
+            height:100%;
+            text-align:center;
+            font-size:18px;
+            line-height:35px;
+        }
+        #navigator li a{
+            text-decoration:none;
+            color:white;
+        }
+        #navigator li:hover{
+            background-color:limegreen;
+            cursor:pointer;
+        }
+
+        /* content 영역에 대한 전반적인 구조 */
+        #content>div{float:left;height:100%;}
+        #content_1{width:15%;}
+        #content_2{width:60%;}
+        #content_3{width:25%;}
+
+        #content_2>div{
+            width:100%; 
+            height:50%;
+        }
+        #content_2>div>div{
+            height:100%; 
+            width:50%; 
+            float:left;
+        }
+
+        #content_3>div{width:100%;}
+        #content_3_1{height:20%;}
+        #content_3_2{height:50%;}
+        #content_3_3{height:30%;}
+
+
+        /* content 영역에 대한 세부 스타일 */
+        #content img{width:100%;}
+        #content_2 img{
+            height:90%;
+            padding:0px 5px;
+        }
+        #content p{
+            margin:0;
+            text-align:center;
+            font-size:15px;
+        }
+
+        /* content 영역의 login 폼에 대한 세부 스타일 */
+        #login_form, #login_etc{width:100%;}
+        #login_form{height:70%;}
+        #login_etc{height:30%; text-align: center;}
+
+        #login_form>div{height:100%; float:left;}
+        #login_input_id_pwd{width:70%;}
+        #login_input_btn{width:30%;}
+
+        #input_id, #input_pwd{
+            width:100%;
+            height:50%;
+        }
+        #login_btn{
+            width:100%;
+            height:100%;
+        }
+        #login_etc a{
+            text-decoration:none;
+            font-size:13px;
+            color:black;
+        }
+
+        /* footer 영역에 대한 세부 스타일 */
+        #footer img{
+            width:100%;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div id="header_1">
+                <a href="">
+                    <img src="실습/실습_v1/image/logo.jpg" alt="">
+                </a>
+            </div>
+            <div id="header_2">
+                <a href="">
+                    <img src="실습/실습_v1/image/mainlogo.jpg" alt="">
+                </a>
+            </div>
+            <div id="header_3"></div>
+        </div>
+
+        <div id="navigator">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Board</a></li>
+                <li><a href="#">Contact</a></li> 
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="content_1">
+                <img src="실습/실습_v1/image/left_img.jpg" alt="">
+            </div>
+
+            <div id="content_2">
+                <div id="content_2_1">
+                    <div>
+                        <img src="실습/실습_v1/image/main_img1.jpg" alt="">
+                        <p>나무를 심는 사람들</p>
+                    </div>
+                    <div>
+                        <img src="실습/실습_v1/image/main_img2.jpg" alt="">
+                        <p>아이들에게 녹색 미래를..</p>
+                    </div>
+                </div>
+                <div id="content_2_2">
+                    <div>
+                        <img src="실습/실습_v1/image/main_img3.jpg" alt="">
+                        <p>설악산 살리는 길</p>
+                    </div>
+                    <div>
+                        <img src="실습/실습_v1/image/main_img4.jpg" alt="">
+                        <p>사라지는 북극곰들</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="content_3">
+                <div id="content_3_1">
+                    <form id="login_form">
+                        <div id="login_input_id_pwd">
+                            <input type="text" id="input_id" placeholder="ID를 입력하세요">
+                        
+                            <input type="password" id="input_pwd" placeholder="PWD를 입력하세요">
+                        </div>
+                        <div id="login_input_btn">
+                            <button type="submit" id="login_btn">로그인</button>
+                        </div>
+                    </form>
+                    <div id="login_etc">
+                        <a href="">회원가입</a> 
+                        <a href="">ID/PWD 찾기</a>
+                    </div>
+                </div>
+                <div id="content_3_2">
+                    <img src="실습/실습_v1/image/right_img.jpg" alt="">
+                </div>
+                <div id="content_3_3">
+                    <img src="실습/실습_v1/image/me_chat.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <img src="실습/실습_v1/image/footer.JPG" alt="">
+        </div>
+    </div>
+</body>
+</html>

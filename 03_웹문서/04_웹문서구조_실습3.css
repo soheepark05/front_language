@@ -1,0 +1,64 @@
+*:not(h1) {
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+}
+
+header {
+    height: 20%;
+}
+
+#header_contents {
+    height: 80%;
+}
+
+header>#header_contents>div{
+    height: 100%;
+    float: left;
+}
+
+#header1 {
+    width: 20%;
+}
+
+#header2 {
+    width: 60%;
+}
+
+#header3 {
+    width: 20%;
+}
+
+nav {
+    height: 20%;
+}
+
+section {
+    height: 60%;
+}
+
+section>article {
+    height: 100%;
+    float: left;
+}
+
+#content1 {
+    width: 20%;
+}
+
+#content2 {
+    width: 60%;
+}
+
+#content3 {
+    width: 20%;
+}
+
+footer {
+    height: 20%;
+}

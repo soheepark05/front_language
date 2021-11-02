@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div, form, input{
+            /* border:1px solid red;  */
+            box-sizing:border-box;
+        }
+        #header, #navigator, #footer, #content_1>div, #content_2>div {border:1px solid lightgray;}
+        a{text-decoration: none; color:black; font-size:12px;}
+        
+        .wrap{width:1000px;height:800px;margin:auto;}
+
+        /* 전반적인 큰 틀 (4개의 영역) */
+        .wrap>div{width:100%;}
+        #header{height:15%;}
+        #navigator{height:5%; margin:10px 0px;}
+        #content{height:55%;}
+        #footer{height:20%; margin:10px 0px;}
+
+        /* 헤더 영역의 전반적인 틀 */
+        #header>div{height:100%; float:left;}
+        #header_1{width:20%; position:relative;}
+        #header_2{width:60%; position:relative;}
+        #header_3{width:20%;}
+
+        /* 헤더 영역의 세부 요소 스타일 */
+        /* 로고 이미지, 검색창 공통 스타일 */
+        #header_1 img, #search_form{
+            position:absolute; 
+            margin:auto; 
+            top:0; 
+            bottom:0; 
+            left:0; 
+            right:0;
+        }
+
+        /* 검색창 추가적인 스타일 */
+        #search_form{
+            width:70%;
+            height:30%;
+        }
+        #search_form>*{height:100%; float:left;}
+        #search_form>input{width:80%;}
+        #search_form>button{width:20%; background:none;}
+
+        /* 메뉴바 관련 스타일 */
+        #navi{
+            list-style-type: none;
+            margin: 0;
+            padding:0;
+            height:100%;
+            width:100%;
+        }
+        #navi>li{
+            float:left;
+            height:100%;
+            width:20%;
+            text-align:center;
+        }
+        #navi a{
+            font-size:16px;
+            font-weight:600;
+            color:rgba(56, 56, 100, 0.774);
+            display: block;
+            height:100%;
+            line-height:40px;
+        }
+        #navi a:hover{color:rgb(13, 23, 77);}
+
+        /* content 영역의 전반적인 틀 */
+        #content>div{height:100%; float:left;}
+        #content_1{width:75%;}
+        #content_2{width:25%;}
+
+        /* 왼쪽 content 영역의 전반적인 틀 */
+        #content_1>div{width:98%;}
+        #content_1_1{height:30%;}
+        #content_1_2{height:10%; padding:10px 20px;}
+        #content_1_3{height:55%;}
+
+        /* 오른쪽 content 영역의 전반적인 틀 */
+        #content_2>div{width:100%;}
+        #content_2_1{height:30%;}
+        #content_2_2{height:67%;}
+
+        #content_1_2, #content_1_3, #content_2_2{margin-top:10px;}
+
+
+        /* content 영역의 세부 스타일 */
+        /* 공지사항 및 뉴스 넘어가는 a 태그들 div */
+        #content_1_2_notice{float:left;}
+        #content_1_2_news{float:right;}
+
+        /* 로그인 폼 */
+        #content_2_1>*{width:100%;}
+        #login_form{height:80%;}
+        #login_etc{height:30%; text-align:center;}
+
+        #login_form>div{height:100%; float:left;}
+        #login_input{width:70%;}
+        #login_btn{width:30%;}
+
+        #login_input>input{width:100%; height:50%;}
+        #login_btn>input{width:100%; height:100%;}
+       
+        /* footer 영역의 전반적인 틀 */
+        #footer>div{width:100%}
+        #footer_1{height:30%;}
+        #footer_2{height:70%}
+
+        /* footer 영역의 세부 스타일 */
+        #footer_1>a{
+            font-weight:600;
+            margin:15px;
+            line-height:40px;
+        }
+        #footer_2>p{
+            width:100%;
+            margin:0;
+            box-sizing:border-box;
+            font-size:12px;
+        }
+        #p1{height:80%; padding:15px;}
+        #p2{height:20%; text-align:center;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <div id="header">
+
+            <div id="header_1">
+                <a href="">
+                    <img src="실습/실습_v2/image/logo.PNG" alt="" width="100px">
+                </a>
+            </div>
+            <div id="header_2">
+                <form id="search_form">
+
+                    <input type="search" name="keyword">
+
+                    <button type="submit">
+                        <img src="실습/실습_v2/image/search.png" alt="" width="40%" height="70%">
+                    </button>
+
+                </form>
+            </div>
+            <div id="header_3"></div>
+
+        </div>
+
+        <div id="navigator">
+            <ul id="navi">
+                <li><a href="">교육과정</a></li>
+                <li><a href="">교육원소개</a></li>
+                <li><a href="">취업지원센터</a></li>
+                <li><a href="">산학연계</a></li>
+                <li><a href="">상담센터</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+
+            <div id="content_1">
+
+                <div id="content_1_1">
+                    <a href="">
+                        <img src="실습/실습_v2/image/banner.PNG" alt="" width="100%" height="100%">
+                    </a>
+                </div>
+
+                <div id="content_1_2">
+                    <div id="content_1_2_notice">
+                        <a href="">
+                            안녕하세요 여기는 공지사항 제목이 들어오는 자리입니다.
+                        </a>
+                    </div>
+
+                    <div id="content_1_2_news">
+                        <a href="">경제</a>
+                        <a href="">연예</a>
+                        <a href="">사회</a>
+                    </div>
+                </div>
+
+                <div id="content_1_3">
+                    <img src="실습/실습_v2/image/car.PNG" alt="" width="100%" height="100%">
+                </div>
+
+            </div>
+
+            <div id="content_2">
+                <div id="content_2_1">
+                    <form id="login_form">
+                        <div id="login_input">
+                            <input type="text" placeholder="아이디를 입력하세요">
+                            <input type="password" placeholder="비밀번호를 입력하세요">
+                        </div>
+                        <div id="login_btn">
+                            <input type="submit" value="로그인">
+                        </div>
+                    </form>
+
+                    <div id="login_etc">
+                        <a href="">아이디</a> | 
+                        <a href="">비밀번호찾기</a> |
+                        <a href="">회원가입</a>
+                    </div>
+                </div>
+
+                <div id="content_2_2">
+                    <img src="실습/실습_v2/image/shopping.PNG" alt="" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="footer_1">
+                <a href="">이용약관</a> | 
+                <a href="">개인정보취급방침</a> | 
+                <a href="">인재채용</a> | 
+                <a href="">고객센터</a>
+            </div>
+
+            <div id="footer_2">
+                <p id="p1">
+                    강남지원 1관 : 서울특별시 강남구 테헤란로 14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F <br>
+                    강남지원 2관 : 서울특별시 강남구 테헤란로 10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                    강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F 
+                </p>
+                <p id="p2">
+                    Copyright © 1998-2020 KH Information Educational Institute All Right Reserved
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
