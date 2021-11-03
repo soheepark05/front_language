@@ -21,9 +21,11 @@
     -->
 
     <h3>폼 태그의 기본 구조</h3>
-    <form action="" method="post" autocomplete="off">
+    <form action="" method="post" autocomplete="on"> <!--on 했으니까 이전에 기입했던거는 다 기억함-->
+        <!-- 메소드가 post방식이니 사용자가 입력한 값을 url에 노출시키지 않는 방식에 기입했던것을 다 기억함-->
         <label>
             <!-- 
+                뭔지 알려주는 라벨... text같은거지뭐
                 name : form 태그 안에서 input 태그를 구분하는 역할을 한다.
                        나중에 서버로 값을 전달할 때 name 속성과 텍스트 필드에 작성된 값이 세트(key=value)로 넘어간다.
             -->
@@ -42,8 +44,8 @@
 
     <form>
         <fieldset>
+            <!--<legend> 태그는 <fieldset> 요소의 캡션(caption)을 정의할 때 사용-->
             <legend>회원정보</legend>
-
             <label>아이디 : <input type="text" name="id" autocomplete="off"></label> <br>
             <label>패스워드 : <input type="password" name="pwd"></label> <br>
         </fieldset>
@@ -52,7 +54,6 @@
 
         <fieldset>
             <legend>배송정보</legend>
-            
             <label>수령인 : <input type="text" name="name"></label><br>
             <label>주소 : <input type="text" name="address"></label>
         </fieldset>
@@ -62,7 +63,7 @@
         <input type="submit" value="회원가입">
     </form>
 
-    <hr>
+    <hr> <!-- 수평선이다요-->
 
     <h3>텍스트와 관련된 input 태그들</h3>
 
