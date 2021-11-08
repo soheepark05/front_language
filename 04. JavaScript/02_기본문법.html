@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 문법</title>
+    <style>
+        .area {
+            width: 450px;
+            height: 200px;
+            border: 1px solid;
+            margin-top: 5px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading1">기본 문법</h1>
+
+    <script>
+        var h = document.getElementById('heading1');
+    // h.style.backgroundColor = 'red';
+    </script>
+
+    <hr>
+
+    <h2>1. 변수와 자료형</h2>
+    <h3>1) 변수 선언</h3>
+    <p>
+        - 함수 내부에서 'var 변수명;'으로 선언하면 함수에서만 사용 가능한 지역변수가 된다. <br>
+        - 함수 내부에서 '변수명;'으로 선언하거나 함수 밖에서 '변수명;' 또는 'var 변수명;'으로 선언하면 전역변수가 된다. <br>
+        - 전역변수와 지역변수가 동일한 이름인 경우, 함수 내부에서 호출하면 지역변수가 우선권을 가진다. <br>
+        - 전역변수 사용 시 'window.변수명' 혹은 'this.변수명'으로 표현해서 사용한다. (window, this 생략 가능) <br>
+        - 전역변수는 해당 window 내에서 어디든 사용할 수 있고, 지역변수는 해당 함수 내에서만 사용이 가능하다. <br><br>
+
+        * 참고 - window 객체는 브라우저에서 제공하는 브라우저창(window)에 대한 정보를 담고 있는 객체이다.
+    </p>
+
+    <h3>2) 자료형</h3>
+    <p>
+        자바스크립트에서는 변수에 별도로 자료형을 지정해 주지 않고 리터럴에 의해 자료형이 결정된다.
+    </p>
+    <ul>
+        <li>string(문자열)</li>
+        <li>number(숫자)</li>
+        <li>boolean(논리값)</li>
+        <li>object(객체)</li>
+        <li>function(함수)</li>
+        <li>undefined(초기화가 안된 변수)</li>
+    </ul>
+
+    <button onclick="typeTest();">자료형 테스트</button>
+
+    <div id="area1" class="area"></div>
+
+    <h4>* infinity와 NaN</h4>
+    <p>
+        자바스크립트의 경우 어떤 수를 0으로 나누면 infinity라는 값이 들어가게 되고 <br>
+        자바스크립트가 표현할 수 없는 숫자는 NaN(Not a Number)로 표시된다.
+    </p>
+
+    <button onclick="opTest();">infinity, NaN 테스트</button>
+
+    <div id="area2" class="area"></div>
+
+    <hr>
+
+    <h2>2. 데이터 형변환</h2>
+    <h3>1) 문자열과 숫자의 '+' 연산</h3>
+    <p>
+        문자열 + 숫자 = 문자열 <br>
+        숫자 + 숫자 + 문자열 = 문자열(숫자가 먼저 계산되고 뒤의 문자열과 합쳐진다.)
+    </p>
+
+    <button onclick="testPlus();">문자열과 숫자의 + 연산</button>
+
+    <div id="area3" class="area"></div>
+
+    <h3>2) 강제 형변환</h3>
+    <p>
+        자바스크립트에서 문자형 => 숫자형 변환 시 <br>
+        Number 내장 객체 또는 parseInt(), parseFloat() 내장 함수를 이용하여 강제 형변환이 가능하다. 
+        
+        <br><br>
+
+        자바스크립트에서 숫자형 => 문자형 변환 시 <br>
+        String 내장 객체를 이용하여 강제 형변환이 가능하다.
+    </p>
+
+    <button onclick="castingTest();">casting 테스트</button>
+
+    <div id="area4" class="area"></div>
+
+    <script src="./02_기본문법.js"></script>
+    
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+</body>
+</html>
