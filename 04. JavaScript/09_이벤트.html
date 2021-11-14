@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+</head>
+<body>
+    <h1>이벤트</h1>
+
+    <hr>
+
+    <h2>이벤트 모델의 종류</h2>
+    <h3>고전 이벤트 모델</h3>
+    <p>
+        요소 객체가 가지고 있는 이벤트 속성에 이벤트 핸들러를 연결하는 방법이다. <br>
+        이벤트 객체를 제거할 수도 있는데 제거하고자 한다면 해당 이벤트 속성 값에 null을 대입하면 된다.
+    </p>
+
+    <button id="btn1">실행 확인</button>
+    <button id="btn2">실행 확인</button>
+
+    <h3>인라인 이벤트 모델</h3>
+    <p>
+        요소 내부에 이벤트 속성으로 실행 내용을 작성하는 방법이다. <br>
+        단순한 코드의 경우엔 직접 코드를 입력을 해도 좋으나 script 태그 내에 정의된 함수를 호출하는 방식을 선호한다.
+    </p>
+
+    <!-- <button onclick="alert('안녕하세요~')">실행 확인</button> -->
+    <button onclick="test1();">실행 확인</button>
+
+    <h3>표준 이벤트 모델</h3>
+    <p>
+        w3에서 공식적으로 지정한 이벤트 모델로 한 번에 여러 개의 이벤트 핸들러 설정이 가능하다. <br>
+
+        [참고] HTML DOM 이벤트 종류 <br>
+        https://www.w3schools.com/jsref/dom_obj_event.asp
+    </p>
+
+    <button id="btn3">실행 확인</button>
+
+    <h2>이벤트가 발생한 해당 요소 객체에 접근하는 방법</h2>
+    <p>
+        이벤트가 발생한 요소 객체는 내부적으로 이벤트 발생 정보를 담고 있는 객체를 매개변수로 전달한다. <br>
+        즉, 이벤트 핸들러 내부에서 이벤트가 발생한 해당 요소 객체에 접근이 가능하다.
+    </p>
+
+    <button id="btn4">고전 이벤트 방식</button>
+    <button onclick="test2()">인라인 이벤트 방식</button>
+    <button id="btn5">표준 이벤트 방식</button>
+
+    <h2>태그별 기본적으로 가지고 있는 이벤트 제거</h2>
+    <p>
+        기본 이벤트 가지고 있는 요소 <br>
+        a : 클릭 시 href에 제시되어 있는 페이지를 요청하는 기본 이벤트 보유 <br>
+        submit : 클릭 시 입력 양식 제출 후 페이지를 다시 로딩하는 기본 이벤트 보유 <br><br>
+
+        기본 이벤트가 있는 요소에 onclick 속성을 부여하면 이 코드가 우선적으로 먼저 실행되고 그 다음에 기본 이벤트가 실행된다. <br> 
+        태그에 기본적으로 설정되어 있는 이벤트 제거하기 위해서는 이벤트 핸들러의 return 값을 false로 하면된다.
+    </p>
+
+    <a href="https://www.naver.com">네이버로 바로가기</a>
+    <a href="https://www.naver.com" onclick="alert('네이버 바로가기 클릭~~~');">네이버로 바로가기</a>
+    <a href="https://www.naver.com" onclick="return false;">네이버로 바로가기</a>
+
+    <h3>기본 이벤트 제거 1</h3>
+    <form onsubmit="return test3();">
+        <label>비밀번호 : <input type="password" name="pass1" id="pass1"></label><br>
+        <label>비밀번호 확인 : <input type="password" name="pass2" id="pass2"></label>
+
+        <hr>
+
+        <!-- <input type="submit" onclick="return test3();" value="제출"> -->
+        <input type="submit" value="제출">
+    </form>
+
+    <h3>기본 이벤트 제거 2</h3>
+    <form>
+        <label>아이디 : <input type="text" name="userId" id="userId"></label><br>
+        영문자, 숫자로만 총 5 ~ 12자 사이로 입력해 주세요. <br><br>
+
+        <input type="submit" id="submit" value="회원가입">
+    </form>
+
+    <script src="./09_이벤트.js"></script>
+
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+</body>
+</html>

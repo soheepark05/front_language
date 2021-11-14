@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <h1>함수</h1>
+
+    <hr>
+
+    <h2>함수 선언</h2>
+    <h3>선언적 함수</h3>
+    <p>
+        function 키워드에 함수명을 작성하여 사용하는 방법
+    </p>
+
+    <button onclick="test1();">실행 확인</button>
+
+    <h3>익명 함수</h3>
+    <p>
+        함수명을 작성하지 않고 변수에 대입하는 방법(이벤트 핸들러 작성 시 주로 사용된다.)
+    </p>
+
+    <button id="btn1">실행 확인</button>
+
+    <h3>스스로 실행하는 함수</h3>
+    <p>
+        함수 정의와 동시에 즉시 실행되는 함수로 단 한 번만 호출되며 다시 호출할 수 없다.
+    </p>
+
+    <p id="p1"></p>
+
+    <h3>화살표 함수(Arrow Function)</h3>
+    <pre>
+        ES6에 도입된 함수 선언 방법으로 function 키워드 대신 => 를 사용해 좀 더 간략한 방법으로 함수를 선언할 수 있다. 
+
+        [표현법]
+            - 매개 변수가 없을 때 : () => { ... } 
+            - 매개 변수가 하나 일 때 : x => { ... }
+            - 매개 변수가 두 개 이상일 때 : (x, y) => { ... }
+            - 리턴 처리 
+                - 처리할 라인이 여러 개라면 {}로 감싸서 처리해야 한다.
+                (x, y) => { 
+                    실행 구문; 
+                    
+                    return x * y; 
+                }
+                - 처리할 라인이 하나라면 {}와 return 문을 생략할 수 있다.
+                (x, y) => x * y;
+        
+        * 기존 function과 this가 가리키는 대상이 조금 다르기 때문에 주의해야 한다. (javascript arrow function this)
+    </pre>
+    
+    <hr>
+
+    <h2>함수의 매개변수</h2>
+
+    <h3>매개변수</h3>
+    <p>
+        함수 실행에 필요한 값을 외부에서 함수 내부로 전달할 때 매개변수를 통해서 매개값을 전달한다. <br>
+        함수를 호출할 때 매개변수의 개수만큼 매개값을 전달하는 것이 일반적이지만 그렇지 않은 경우에도 에러가 발생하지 않는다.
+    </p>
+
+    <button id="btn2">실행 확인</button>
+
+    <h3>arguments</h3>
+    <p>
+        초과된 매개값이나 가변적으로 매개값을 함수 내부로 전달할 때는 argument 객체를 사용한다. <br>
+        (모든 매개값이 argument 객체의 프로퍼티로 보관된다.)
+    </p>
+
+    <button id="btn3">실행 확인</button>
+
+    <h3>매개변수에 this 요소 전달하기</h3>
+
+    <!-- this : 이벤트가 발생했을 때의 이벤트가 발생한 요소 -->
+    <button onclick="thisTest(this)">버튼 1</button>
+
+    <hr>
+
+    <h2>함수의 리턴</h2>
+    <h3>일반적인 값 리턴</h3>
+
+    <button onclick="returnTest();">실행 확인</button>
+
+    <h3>익명 함수를 리턴하는 함수</h3>
+
+    <label>이름 : <input type="text" id="userName"></label>
+    <button id="btn4">실행 확인</button>
+
+    <hr>
+
+    <h2>내장 함수</h2>
+    <h3>eval()</h3>
+    <p>
+        문자열을 자바스크립트 코드로 변환해서 실행하는 함수
+    </p>
+
+    <label>계산식 : <input type="text" id="calc"></label>
+    <button id="btn5">실행 확인</button>
+
+    <p id="p2"></p>
+
+    <script src="./04_함수.js"></script>
+
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+</body>
+</html>

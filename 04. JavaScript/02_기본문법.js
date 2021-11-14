@@ -194,3 +194,44 @@ function castingTest() {
     area.innerHTML += `${2 + parseFloat('3')} <br>`; // 5
     area.innerHTML += `${parseInt('0xff', 16)} <br>`; // 255
 }
+
+// 연산자 테스트
+function opTest2() {
+    let area = document.getElementById('area5');
+
+    area.innerHTML = '"=" 연산자 테스트 <br>';
+    area.innerHTML += `'7' == 7 : ${'7' == 7} <br>`;
+    area.innerHTML += `'7' == '7' : ${'7' == '7'} <br>`;
+    area.innerHTML += `7 == 7 : ${7 == 7} <br>`;
+    area.innerHTML += `'7' != 8 : ${'7' != 8} <br>`;
+    area.innerHTML += `'7' != '8' : ${'7' != '8'} <br>`;
+    area.innerHTML += `7 != 8 : ${7 != 8} <br>`;
+
+
+    area.innerHTML += '<br>'
+
+    area.innerHTML += '"===" 연산자 테스트 <br>';
+    area.innerHTML += `'7' === 7 : ${'7' === 7} <br>`;
+    area.innerHTML += `'7' === '7' : ${'7' === '7'} <br>`;
+    area.innerHTML += `7 === 7 : ${7 === 7} <br>`;
+    area.innerHTML += `'7' !== 8 : ${'7' !== 8} <br>`;
+    area.innerHTML += `'7' !== '8' : ${'7' !== '8'} <br>`;
+    area.innerHTML += `7 !== 8 : ${7 !== 8} <br>`;
+}
+
+// 제어문 테스트
+function forInTest() {
+    let result = '';
+    // let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+    // 반복 변수에 array의 index를 순서대로 i에 담아서 반복시킨다.
+    for (const i in array) {
+        // console.log(index);
+        console.log(array[i]);
+
+        result += array[i] + ' ';
+    }
+
+    alert(result);
+}
