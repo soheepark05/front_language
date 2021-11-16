@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 개요</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script src="./js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h1>jQuery 개요</h1>
+
+    <hr>
+
+    <h2>jQuery 란?</h2>
+    <p>
+        기존에 자바스크립트 만으로 구현하기 복잡했던 구문 작성들을 간호화하기 위해 
+        '존 레식'에 의해 개발된 자바스크립트 라이브러리이다.
+    </p>
+
+    <h2>jQuery의 장점</h2>
+    <ol>
+        <li>DOM과 관련된 처리를 쉽게 구현할 수 있다.</li>
+        <li>ajax 통신, 이벤트 처리 등을 폭넓게 지원한다.</li>
+        <li>별도의 플러그인을 통해 차트, 슬라이드 쇼, 테이블 등을 간단히 구현할 수 있다.</li>
+    </ol>
+
+    <h2>jQuery 라이브러리 연결 방법</h2>
+    <p>
+        script 태그를 사용해서 jQuery 관련 .js 파일을 가져온다. <br><br>
+
+        1. jQuery 라이브러리  다운로드를 통한 연결 (오프라인) <br>
+            - js 파일을 직접 다운로드해서 저장한 후 저장된 파일 경로를 지정하는 방법이다. <br><br>
+
+        2. CDN(Content Delivery Network)를 통한 연결(온라인) <br>
+            - 라이브러리를 제공하는 사이트의 주소를 이용하여 파일 경로를 지정하는 방법이다. <br><br>
+    </p>
+
+    <h2>jQuery 시작하기</h2>
+    <p>
+        1. jQuery는 문서에서 DOM 요소가 다 로드된 후에 실행되어야 한다. <br>
+            - 자바스크립트에서 해당 내용은 "window.onload = function() {실행 내용};"과 같이 작성한다. <br>
+              해당 문서에서 한 번만 작성 가능하다.(복수 개 설정 시 마지막에 작성된 내용이 적용된다.) <br>
+            - jQuery에서는 "$(document).ready(function() {실행 내용});"과 같이 작성한다. <br>
+              해당 문서에서 여러 번 작성 가능하다.(한 번만 사용하는 것을 지향한다.) <br><br>
+
+        2. jQuery에서의 onload를 의미하는 구문 (3가지 방법) <br>
+            - $(document).ready(function() {실행 내용}); <br>
+            - jQuery(document).ready(function() {실행 내용}); <br>
+            - $(function() {실행 내용}); <br><br>
+
+        3. jQuery 기본 작성 형태 <br>
+            - $('선택자').메소드('속성명', '속성값');
+    </p>
+
+    <script>
+        // 자바 스크립트 방식
+        window.onload = () => {
+            console.log('window.onload');
+        };
+
+        window.onload = () => {
+            console.log('window.onload2');
+        };
+
+        // jQuery 방식
+        // 일반적으로 가장 많이 사용한다.
+        $(document).ready(() => {
+            console.log('$(document).ready(...) 1');
+        });
+
+        // $ 대신에 jQuery 변수를 사용한다.
+        jQuery(document).ready(() => {
+            console.log('$(document).ready(...) 2');
+        });
+
+        // 제일 축약형
+        $(() => {
+            console.log('$(document).ready(...) 3');
+
+            // p 요소들을 선택해서 글자색을 빨간색으로 바꾸기
+            // $('p').css('color', 'red');
+
+            // 자바스크립트 방식으로 p 요소들을 선택해서 글자색을 빨간색으로 바꾸기
+            let tags = document.getElementsByTagName('p');
+
+            for (const index in tags) {
+                tags[index].style.color = 'red';
+            }
+        });
+    </script>
+    
+    <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
+</body>
+</html>

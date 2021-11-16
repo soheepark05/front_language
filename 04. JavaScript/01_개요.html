@@ -38,8 +38,13 @@
         자바스크립트 소스가 몇 줄 안되는 경우 inline 방식을 사용한다.
     </p>
 
+    <!--버튼생성-->
     <button onclick="alert('버튼 클릭!!')">알림 창 출력</button>
+    <!--console.log('기본'): 정보출력
+        콘솔은 뭐 f12들어가서 콘솔보면 +1 씩 된다.-->
     <button onclick="console.log('버튼 클릭!!')">console 출력</button>
+   
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
     <h4>2) internal 방식</h4>
     <p>
@@ -70,9 +75,10 @@
         });
 
         function btnClick() {
-            alert('버튼 클릭!!');
+            alert('버튼 클릭!!!');
         }
     </script>
+     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
     <h4>3) external 방식</h4>
     <p>
@@ -81,11 +87,12 @@
     </p>
 
     <button onclick="external()">console 출력</button>
+    <!-- 10+20 = 30 콘솔에 출력할걸,,-->
 
-    <hr>
+    <hr> <!-- 수평선 -->
 
     <h3>2. 데이터 입출력</h3>
-    <h4>1) 데이터 입력</h4>
+        <h4>1) 데이터 입력</h4>
     <p>
         window.confirm() <br>
             - 어떤 질문에 대해 "예/아니요"의 결과를 얻을 때 사용한다. <br>
@@ -97,10 +104,12 @@
 
     <script>
         function checkConfirm() {
-            if (confirm('여러분 배고픈가요?')) {
-                alert('저도 배고파요ㅠㅠ');
-            } else {
-                alert('저만 배고픈가요?ㅠㅠ');
+            if (confirm('여러분 배고픈가요?'))  //가설
+            {
+                alert('저도 배고파요ㅠㅠ'); // True값
+            } 
+            else {
+                alert('저만 배고픈가요?ㅠㅠ'); //false 값
             }
         }
     </script>

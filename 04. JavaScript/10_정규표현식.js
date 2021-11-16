@@ -69,4 +69,72 @@ btn2.addEventListener('click', () => {
     // });
 
     // console.log(str2);    
+
+//-----------------
+
+    str = 'a aa aaa aaaa';
+    regExp = /a{1,2}/g;
+
+    area.innerHTML = '<h3>반복 검색</h3>';
+
+
+
+    regExp = /a+/g; //{1,}
+    area.innerHTML += `/a+/g: ${str.replace(regExp,'($&)')} <br>`;
+
+
+
+
+    //^는 문자열의 시작을 의미한다.
+    //$는 문자열의 마지막을 의미한다.
+    str = 'Javascript\nJquery\nShellscript\nAjax'
+
+    area.innerHTML += `<h3>문자열의 앞뒤 구분</h3>`;
+
+    regExp = /^j/ig;
+    area.innerHTML += `/^j/ig: ${str.replace(regExp,'($&)')} <br>`;
+    regExp = /^j/igm;
+    area.innerHTML += `/^j/igm: ${str.replace(regExp,'($&)')} <br>`;
+    regExp = /ipt$/ig;
+    area.innerHTML += `/^j/ig: ${str.replace(regExp,'($&)')} <br>`;
+    
+    str = 'Javascript Jquery Ajax Shellscript';
+
+    regExp = /ipt$/igm;
+    area.innerHTML += `/ipt$/igm: ${str.replace(regExp,'($&)')} <br>`;
+
+
+    area.innerHTML += ``;
+
+
+    //OR검색
+    //[...] 내의 문자 중 하나라도 존재할 경우
+    str = 'Javascript Jquery Ajax';
+    regExp = /[aj]/ig;
+
+    area.innerHTML +=`<h3>OR 검색</h3>`;
+    area.innerHTML +=`/[aj]/ig : ${str.replace(regExp,'($&)')}<br>`;
+
+    regExp = /[^aj]/ig; // [...] 내의 ^은 not의 의미를 가진다.(주의!)
+    area.innerHTML += `/[aj]/ig: ${str.replace(regExp,'($&)')}<br>`;
+
+    str = '123 Javascript';
+    regExp = /[a-z]/ig; //범위를 지정하려면 [...]내에 -를 사용한다.
+    area.innerHTML += `/[a-z]/g: ${str.replace(regExp,'($&)')}<br>`;
+
+    regExp = /[A-Z]/ig; 
+    area.innerHTML += `/[A-Z]/g: ${str.replace(regExp,'($&)')}<br>`;
+
+    regExp = /[0-9]/g;
+    area.innerHTML += `/[0-9]/g: ${str.replace(regExp,'($&)')}<br>`;
+
+    regExp = /[0-9A-Z]/g;
+    area.innerHTML += `/[0-9A-Z]/g: ${str.replace(regExp,'($&)')}<br>`;
+
+    //임의의 문자열 검색
+    //.은 임의의 문자 한 개를 의미하고, 문자 내용은 무엇이든 상관없다.
+    regExp = /..../g;
+    area.innerHTML += `<h3>임의의 문자열 검색</h3>`;
+    area.innerHTML += `/..../g : ${str.replace(regExp,'($&)')}<br> `
 });
+
