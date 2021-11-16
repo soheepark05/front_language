@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 선택자 2</title>
+</head>
+<body>
+    <h1>jQuery 선택자 2</h1>
+
+    <hr>
+
+    <h2>1. 자손 선택자('>')와 후손 선택자(' ')</h2>
+
+    <div style="border: 1px solid;">
+        조상
+        <ul> 자손 1
+            <li>div의 후손이면서 ul의 자손 1</li>
+            <li>div의 후손이면서 ul의 자손 2</li>
+            <li class="test">div의 후손이면서 ul의 자손 3</li>
+            <li class="test">div의 후손이면서 ul의 자손 4</li>
+            <li><h3>div/ul의 후손이면서 li의 자손</h3></li>
+        </ul>
+        <h3>자손 2</h3>
+        <h3>자손 3</h3>
+    </div>
+
+    <h2>2. 기본 속성 선택자</h2>
+
+    <input type="text">
+    <input type="number" class="test test1">
+    <input type="radio">
+    <input type="checkbox">
+    <input type="button" class="test2" value="button">
+
+    <h2>3. 입력 양식 선택자</h2>
+    <input type="text">
+    <input type="button">
+    <input type="checkbox">
+    <input type="file">
+    <br><br>
+    <input type="image" src="../resources/image/flower1.PNG">
+
+    <h2>4. checkbox 상태에 대한 선택자</h2>
+    <label><input type="checkbox" name="hobby" value="game" checked>게임</label>
+    <label><input type="checkbox" name="hobby" value="music">음악</label>
+    <label><input type="checkbox" name="hobby" value="movie">영화</label>
+
+    <h2>5. select, option 태그의 상태에 대한 선택자</h2>
+    <select name="national" id="national">
+        <option value="">----------</option>
+        <option value="한국" label="한국"></option>
+        <option value="미국" label="미국"></option>
+        <option value="중국" label="중국"></option>
+        <option value="일본" label="일본"></option>
+    </select>
+
+    <label for="result">선택한 나라 : </label>
+    <input type="text" id="result" readonly>
+
+    <h2>6. input 상태에 대한 선택자</h2>
+
+    <input type="text"><br>
+    <input type="text" disabled><br>
+    <input type="button" value="활성화"><br>
+    <input type="button" value="비활성화" disabled><br>
+
+    <h2>7. attr()와 prop()</h2>
+    <label for="cb1">선택 : </label>
+    <input type="checkbox" id="cb1" checked="checked">
+    <label for="cb2">비선택 : </label>
+    <input type="checkbox" id="cb2">
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/03_JQUERY선택자2.js"></script>
+
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+</body>
+</html>

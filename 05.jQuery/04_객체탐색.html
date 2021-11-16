@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 탐색</title>
+
+    <style>
+        .wrap, .wrap1, .wrap *, .wrap1 * {
+            border: 1px solid;
+            display: block;
+            padding: 5px;
+            margin: 15px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>객체 탐색</h1>
+
+    <hr>
+
+    <h2>1. Filtering 메소드</h2>
+    <p>
+        선택자로 지정한 요소를 기준으로 
+        요소 그룹에서 위치를 가지고 요소를 선택하는 메소드
+    </p>
+
+    <h4 class="test">filtering 1</h4>
+    <h4 class="test">filtering 2</h4>
+    <h4 class="test">filtering 3</h4>
+    <h4 class="test">filtering 4</h4>
+    <h4>filtering 5</h4>
+    <h4 class="test">filtering 6</h4>
+
+    <h2>2. Ancestors 메소드</h2>
+    <p>
+        선택된 요소의 상위 요소들을 선택할 수 있는 메소드
+    </p>
+
+    <h2>3. Descendants 메소드</h2>
+    <p>
+        선택된 요소의 하위 요소들을 선택할 수 있는 메소드
+    </p>
+
+    <div class="wrap">
+        <div>div
+            <ul>ul
+                <li>li
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+
+        <div>div
+            <p>p
+                <span>span</span>
+            </p>
+        </div>
+    </div> 
+
+    <h2>4. Sideways 메소드</h2>
+
+    <div class="wrap1">
+        <p>p</p>
+        <span class="class1">span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/04_객체탐색.js"></script>
+
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+</body>
+</html>

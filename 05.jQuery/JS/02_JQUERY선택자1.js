@@ -18,7 +18,6 @@ $(document).ready(() => {
     for (let index = 0; index < p.length; index++) {
         p[index].style.color = 'white';
         p[index].style.backgroundColor = 'tomato';
-        
     }
 
     //  2) jQuery를 활용한 방식
