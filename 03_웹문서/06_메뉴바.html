@@ -12,7 +12,7 @@
             height: 40px;
         }
 
-        #navi {
+        #navi { /*부모*/
             /* border: 1px solid; */
             list-style-type: none;
             height: 100%;
@@ -20,16 +20,16 @@
             padding: 0;
         }
 
-        #navi>li {
-            float: left;
+        #navi>li { /*자식*/
+            float: left; /*왼쪽에서부터 정렬*/
             width: 20%;
             text-align: center;
             height: 100%;
         }
 
-        #navi a {
+        #navi a { /*네비에서a태그*/
             text-decoration: none;
-            color: orange;
+            color: pink;
             font-size: 1.5em;
             font-weight: 900;
             height: 100%;
@@ -38,20 +38,21 @@
         }
 
         #navi a:hover {
-            color: orangered;
+            color: rgb(150, 28, 231);
         }
 
         #navi>li>ul {
             list-style-type: none;
             padding: 0;
-            display: none;
+            display: none; /*지금은 안보이는데 갖다대면보임*/
         }
 
-        #navi>li>a:hover+ul {
+        /*hover란 : 요소에 마우스를 올렸을때 반응하게 하는 css요소이다.*/
+        #navi>li>a:hover+ul {/*얘는하위태그들 보여줌*/
             display: block;
         }
 
-        #navi>li>ul:hover {
+        #navi>li>ul:hover { /*얘가있어서 하위태그들클릭할때까지 가만히있음*/
             display: block;
         }
 
